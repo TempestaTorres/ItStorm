@@ -3,7 +3,7 @@ import {FormControl, FormGroup, ReactiveFormsModule, Validators} from "@angular/
 import {Subscription} from 'rxjs';
 import {AuthService} from '../../services/auth-service';
 import {Router, RouterLink} from '@angular/router';
-import {LoginFailure, LoginSuccess, LoginType, SignupType} from '../../services/auth-types';
+import {LoginFailure, LoginSuccess,SignupType} from '../../services/auth-types';
 // @ts-ignore
 import {HttpErrorResponse} from '@angular/common/module.d';
 
