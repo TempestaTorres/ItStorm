@@ -1,0 +1,824 @@
+@import "font-lora.css";
+@import "font-montserrat.css";
+@import "fonts.css";
+
+.app-kit {
+  --global-color-text: #071739;
+  --global-color-text-secondary: #1E1A2B;
+  --global-color-accent: #456f49;
+  --global-color-primary: #709FDC;
+  --color-accent: #089E4E;
+  --color-accent-2: #85E5B2;
+  --color-price: #333333;
+  --color-sale-price: #d72c0d;
+  --color-reviews: #ffb503;
+  --color-critical: #d72c0d;
+  --color-success: #008060;
+  --color-green: #889f83;
+  --color-white: #ffffff;
+  --global-typography-text-font-family: "Montserrat";
+  --global-typography-text-font-size: 14px;
+  --global-typography-text-font-weight: 400;
+  --global-typography-text-font-line-height: 18px;
+  --global-typography-text-text-transform: none;
+
+  --global-typography-text-secondary-font-family: "Montserrat";
+  --global-typography-text-secondary-font-size: 14px;
+  --global-typography-text-secondary-font-weight: 500;
+  --global-typography-text-secondary-font-line-height: 18px;
+
+  --global-typography-accent-font-family: "Montserrat";
+  --global-typography-accent-font-size: 16px;
+  --global-typography-accent-font-weight: 400;
+  --global-typography-accent-font-line-height: 22px;
+
+  --global-typography-accent-2-font-family: "Montserrat";
+  --global-typography-accent-2-font-size: 16px;
+  --global-typography-accent-2-font-weight: 500;
+  --global-typography-accent-2-font-line-height: 21px;
+
+  --global-typography-text-italic-font-family: "Montserrat";
+  --global-typography-text-italic-font-size: 16px;
+  --global-typography-text-italic-font-weight: 300;
+  --global-typography-text-italic-font-line-height: 21px;
+
+  --global-typography-text-primary-font-family: "Montserrat";
+  --global-typography-text-primary-font-size: 18px;
+  --global-typography-text-primary-font-weight: 600;
+  --global-typography-text-primary-font-line-height: 23px;
+
+  --global-typography-text-99-font-family: "Montserrat";
+  --global-typography-text-99-font-size: 20px;
+  --global-typography-text-99-font-weight: 400;
+  --global-typography-text-99-font-line-height: 26px;
+
+  --global-typography-text-100-font-family: "Montserrat";
+  --global-typography-text-100-font-size: 20px;
+  --global-typography-text-100-font-weight: 500;
+  --global-typography-text-100-font-line-height: 26px;
+
+  --global-typography-primary-font-family: "Lora";
+  --global-typography-primary-font-size: 50px;
+  --global-typography-primary-font-weight: 400;
+  --global-typography-primary-line-height: 65px;
+
+  --global-typography-secondary-font-family: "Lora";
+  --global-typography-secondary-font-size: 38px;
+  --global-typography-secondary-font-weight: 400;
+  --global-typography-secondary-line-height: 49px;
+  --global-typography-secondary-text-transform: none;
+
+  --global-typography-101-font-family: "Lora";
+  --global-typography-101-font-size: 32px;
+  --global-typography-101-font-weight: 400;
+  --global-typography-101-line-height: 42px;
+
+  --global-typography-102-font-family: "Lora";
+  --global-typography-102-font-size: 36px;
+  --global-typography-102-font-weight: 400;
+  --global-typography-102-line-height: 47px;
+
+  --global-typography-103-font-family: "Lora";
+  --global-typography-103-font-size: 26px;
+  --global-typography-103-font-weight: 400;
+  --global-typography-103-line-height: 34px;
+  --global-typography-line-size-default: 15px;
+
+  --font-heading-scale: 1;
+  --font-navigation-family: "Montserrat";
+  --font-navigation-size: 16px;
+  --typography-size-default: 14px;
+
+  --page-width: 1440px;
+  --font-body-scale: 1.0;
+
+  --box-shadow-extra-small: 0 1px 1.75px 0 rgba(0, 0, 0, .12), 0 -.5px 1.5px 0 rgba(0, 0, 0, .09), 0 3px 4px 0 rgba(0, 0, 0, .03);
+  --box-shadow-small: 0 1px 2px -.5px rgba(0, 0, 0, .05), 0 2px 4px -1px rgba(0, 0, 0, .08), 0 3px 6px -1.5px rgba(0, 0, 0, .08), 0 -.5px 1.5px 0 rgba(0, 0, 0, .09);
+  --box-shadow-base: 0 1px 2px -.5px rgba(0, 0, 0, .05), 0 2px 4px -1px rgba(0, 0, 0, .08), 0 3px 6px -1.5px rgba(0, 0, 0, .08), 0 8px 16px -6px rgba(0, 0, 0, .06), 0 -.5px 2px 0 rgba(0, 0, 0, .09);
+  --box-shadow-large: 0 1px 2px -.5px rgba(0, 0, 0, .05), 0 2px 4px -1px rgba(0, 0, 0, .08), 0 3px 6px -1.5px rgba(0, 0, 0, .08), 0 8px 16px -6px rgba(0, 0, 0, .06), 0 24px 40px -12px rgba(0, 0, 0, .06), 0 -.5px 1.5px 0 rgba(0, 0, 0, .09);
+  --box-shadow-extra-large: 0 1px 2px -.5px rgba(0, 0, 0, .05), 0 2px 4px -1px rgba(0, 0, 0, .08), 0 3px 6px -1.5px rgba(0, 0, 0, .08), 0 8px 16px -6px rgba(0, 0, 0, .06), 0 24px 40px -12px rgba(0, 0, 0, .06), 0 32px 48px -12px rgba(0, 0, 0, .06), 0 -.5px 1.5px 0 rgba(0, 0, 0, .09);
+
+  --opacity-disabled: .5;
+  --opacity-readonly: .7;
+
+  --duration-short: .1s;
+  --duration-default: .25s;
+  --duration-long: .5s;
+  --duration-animate: 1000ms;
+  --duration-faster: 88.9ms;
+  --duration-fast: .1333s;
+  --duration-base: .2s;
+  --duration-slow: .3s;
+  --duration-slower: .45s;
+  --duration-slowest: 675ms;
+  --duration-reduced-motion: 1ms;
+  --timing-base: ease-in-out;
+  --timing-ease-out: cubic-bezier(.3, .5, .5, 1);
+  --timing-linear: linear;
+  --timing-spring: cubic-bezier(.3, 0, 0, 1);
+
+  --image-position: center center;
+
+  --buttons-radius: 5px;
+  --buttons-radius-outset: 13px;
+  --buttons-border-width: 1px;
+  --buttons-border-opacity: 0.0;
+  --buttons-shadow-opacity: 0.0;
+  --buttons-shadow-visible: 0;
+  --buttons-shadow-horizontal-offset: 0px;
+  --buttons-shadow-vertical-offset: 0px;
+  --buttons-shadow-blur-radius: 0px;
+  --buttons-border-offset: 0.3px;
+  --button-radius: 0px;
+  --font-buttons-size: 14px;
+  --font-button-size: 16px;
+  --font-button-baseline: 3px;
+
+  --checkbox-size: 18px;
+
+  --font-navigation-scale: 1.0;
+  --text-transform: none;
+  --color-base-background-accent-1: 212, 196, 217;
+  --color-background-dark: 235, 235, 235;
+
+  --color-base-border-1: 32, 43, 33; /*209, 209, 209;*/
+  --color-base-border-2: 209, 209, 209;
+  --color-base-text-1: 0, 0, 0, 1;
+  --color-base-accent-1: 29, 29, 29;
+  --color-base-accent-2: 242, 242, 242;
+  --color-base-accent-3: 255, 255, 255;
+  --color-base-text-accent-2: 29, 29, 29;
+  --color-base-opacity: 29, 29, 29;
+  --color-base-text: 51, 51, 51;
+  --color-base-background: 255, 255, 255;
+  --color-border: 210, 213, 217;
+  --color-placeholder: 243, 243, 243;
+  --color-base-heading: 136, 159, 131;
+  --color-base-solid-button-labels: 255, 255, 255;
+  --color-base-outline-button-labels: 136, 159, 131;
+  --color-base-accent: 136, 159, 131;
+  --color-media-cursor-background: 255, 255, 255;
+  --color-overlay: 26, 27, 24;
+  --color-keyboard-focus: 136, 159, 131;
+  --scrollbar-width: 0;
+  --color-link: var(--color-base-outline-button-labels);
+
+  --inputs-radius: 30px;
+  --inputs-border-width: 0px;
+  --inputs-border-opacity: 0.0;
+  --inputs-shadow-opacity: 0.0;
+  --inputs-shadow-horizontal-offset: 4px;
+  --inputs-shadow-vertical-offset: 4px;
+  --inputs-shadow-blur-radius: 10px;
+  --inputs-radius-outset: 30px;
+  --inputs-margin-offset: 0px;
+
+  --popup-border-width: 0px;
+  --popup-border-opacity: 0.0;
+  --popup-corner-radius: 12px;
+  --popup-shadow-opacity: 0.0;
+  --popup-shadow-horizontal-offset: 4px;
+  --popup-shadow-vertical-offset: 4px;
+  --popup-shadow-blur-radius: 10px;
+  --drawer-border-width: 0px;
+  --drawer-border-opacity: 0;
+  --drawer-shadow-opacity: 0;
+  --drawer-shadow-horizontal-offset: 0px;
+  --drawer-shadow-vertical-offset: 0px;
+  --drawer-shadow-blur-radius: 0px;
+
+  --product-card-image-padding: 0.0rem;
+  --product-card-corner-radius: 12px;
+  --product-card-text-alignment: center;
+  --product-card-border-width: 0.0rem;
+  --product-card-border-opacity: 0.0;
+  --product-card-shadow-opacity: 0.0;
+  --product-card-shadow-visible: 0;
+  --product-card-shadow-horizontal-offset: 4px;
+  --product-card-shadow-vertical-offset: 4px;
+  --product-card-shadow-blur-radius: 10px;
+  --product-card-color-scheme: var(--color-placeholder);
+  --product-card-radius: 10px;
+  --product-card-color-shadow: 168, 232, 226;
+
+  --collection-card-image-padding: 0.0rem;
+  --collection-card-text-alignment: left;
+
+  --spacing-sections-desktop: 6px;
+  --spacing-sections-mobile: 10px;
+
+  --grid-desktop-vertical-spacing: 26px;
+  --grid-desktop-horizontal-spacing: 26px;
+  --grid-mobile-vertical-spacing: 16px;
+  --grid-mobile-horizontal-spacing: 16px;
+
+  --media-padding: 0px;
+  --media-border-opacity: 0.0;
+  --media-border-width: 0px;
+  --media-radius: 12px;
+  --media-shadow-opacity: 0.0;
+  --media-shadow-horizontal-offset: 4px;
+  --media-shadow-vertical-offset: 4px;
+  --media-shadow-blur-radius: 10px;
+  --media-shadow-visible: 0;
+
+  --border-radius: var(--product-card-corner-radius);
+  --border-width: var(--product-card-border-width);
+  --border-opacity: var(--product-card-border-opacity);
+  --shadow-horizontal-offset: var(--product-card-shadow-horizontal-offset);
+  --shadow-vertical-offset: var(--product-card-shadow-vertical-offset);
+  --shadow-blur-radius: var(--product-card-shadow-blur-radius);
+  --shadow-opacity: var(--product-card-shadow-opacity);
+  --shadow-visible: var(--product-card-shadow-visible);
+  --image-padding: var(--product-card-image-padding);
+  --text-alignment: var(--product-card-text-alignment);
+
+  --header-height: 127px;
+  --announcement-bar-height: 0;
+  --viewport-height: 100vh;
+
+  .lazy-image-100 {
+    --image-ratio-percent: 100%;
+  }
+
+  .lazy-image-133 {
+    --image-ratio-percent: 133.33333333333334%;
+  }
+
+  .color-option-1 {
+    --color-background: 255, 255, 255;
+    --gradient-background: #ffffff;
+    --color-foreground: 7, 23, 57;
+    --color-base-solid-button-labels: 255, 255, 255;
+    --color-base-solid-button: 32, 43, 33;
+    /*--color-base-outline-button-labels: 32, 43, 33;*/
+    --color-base-outline-button-labels: 136, 159, 131;
+    --color-background-contrast: 191, 191, 191;
+    --color-shadow: 32, 43, 33;
+    --color-link: 32, 43, 33;
+    --color-base-accent-1: 81, 144, 87;
+
+    --color-header-background: 255, 255, 255;
+    --color-header-foreground: 51, 51, 51;
+    --color-header-border: 136, 159, 131;
+    --icon-weight: 1.7px;
+  }
+
+  .color-option-2 {
+    --color-background: 164, 203, 163;
+    --gradient-background: 151, 187, 150;
+    --color-foreground: 44, 44, 44;
+    --color-base-solid-button-labels: 255, 255, 255;
+    --color-base-solid-button: 69, 111, 73;
+    --color-base-outline-button-labels: 44, 44, 44;
+    --color-background-contrast: 79, 114, 78;
+    --color-shadow: 32, 43, 33;
+    --color-link: 32, 43, 33;
+  }
+
+  .color-option-3 {
+    --color-background: 100, 143, 100;
+    --gradient-background: 100, 143, 100;
+    --color-foreground: 44, 44, 44;
+    --color-base-solid-button-labels: 255, 255, 255;
+    --color-base-solid-button: 44, 44, 44;
+    --color-base-outline-button-labels: 44, 44, 44;
+    --color-background-contrast: 79, 114, 78;
+    --color-shadow: 32, 43, 33;
+    --color-link: 32, 43, 33;
+  }
+
+  .color-option-4 {
+    --color-background: 255, 255, 255;
+    --gradient-background: 225, 231, 224;
+    --color-foreground: 185, 213, 253;
+    --color-base-solid-button-labels: 255, 255, 255;
+    --color-base-solid-button: 44, 44, 44;
+    --color-base-outline-button-labels: 69, 111, 73;
+    --color-background-contrast: 79, 114, 78;
+    --color-shadow: 32, 43, 33;
+    --color-link: 81, 144, 87;
+    --color-button-background: 69, 111, 73;
+    --color-button-text: 255, 255, 255;
+    --color-button-border: 69, 111, 73;
+    --color-accent:#709FDC;
+    --color-accent-2: #95bdf1;
+  }
+  .color-option-5 {
+    --color-background: 185, 213, 253;
+    --gradient-background: 185, 213, 253;
+    --color-foreground: 30, 26, 43;
+    --color-base-solid-button-labels: 255, 255, 255;
+    --color-base-solid-button: 44, 44, 44;
+    --color-base-outline-button-labels: 69, 111, 73;
+    --color-background-contrast: 79, 114, 78;
+    --color-shadow: 32, 43, 33;
+    --color-link: 112, 159, 220;
+    --color-button-background: 112, 159, 220;
+    --color-button-text: 255, 255, 255;
+    --color-button-border: 112, 159, 220;
+    --color-header-background: 255, 255, 255;
+    --color-header-foreground: 51, 51, 51;
+    --color-header-border: 136, 159, 131;
+
+    .button {
+      font-weight: 500;
+      text-transform: none;
+      letter-spacing: normal;
+    }
+    .button--small {
+      padding: 6px 16px;
+      min-height: 36px;
+      min-width: 153px;
+    }
+    .button-ok {
+      padding: 10px 20px;
+      width: 73px;
+      height: 36px;
+      font-weight: 500!important;
+      font-size: 12px!important;
+      line-height: 130%!important;
+    }
+    .button-primary {
+      background-color: var(--global-color-primary);
+      font-size: var(--global-typography-accent-font-size);
+      font-weight: var(--global-typography-accent-font-weight);
+      line-height: var(--global-typography-accent-font-line-height);
+    }
+    .button-primary:hover {
+      background-color: #4587de;
+    }
+    .typeset {
+      font-size: 14px!important;
+      line-height: initial!important;
+    }
+  }
+
+  /* Shopify */
+
+  .shopify-section,
+  .section-banner {
+    --image-position: center center;
+    --color-background: 225, 231, 224;
+    --color-foreground: 136, 159, 131;
+    --color-link: var(--color-foreground);
+    --color-button-text: var(--color-background);
+    --color-button-border: var(--color-foreground);
+    --color-button-background: var(--color-foreground);
+    --color-shadow: var(--color-foreground);
+    --shadow-opacity: 0.3;
+    --color-overlay-opacity: 0.28;
+    --image-ratio-percent: 36.493506493506494%;
+    --color-overlay: 0, 0, 0;
+    --color-heading: rgb(var(--color-base-background));
+    --color-text: 255, 255, 255;
+    --product-card-shadow-horizontal-offset: 0;
+    --product-card-shadow-vertical-offset: 0;
+    --product-card-text-alignment: left;
+    --product-card-shadow-opacity: 1;
+    --color-badge-background: rgba(var(--color-text), .75);
+    --color-badge-foreground: rgb(var(--color-foreground));
+    --color-badge-border: rgb(var(--color-border));
+  }
+
+  .section-banner {
+    --color-button-background: 255, 255, 255;
+    --color-button-text: 100, 143, 100;
+    --color-foreground: 255, 255, 255;
+
+  }
+
+  .authorization-section {
+    --image-ratio-percent: 75.0%;
+    --image-position: center center;
+    --color-overlay-opacity: 0.28;
+    --color-overlay: 0, 0, 0;
+    --color-foreground: 255, 255, 255;
+    --color-placeholder: 255, 255, 255;
+    --color-link: var(--color-foreground);
+    --color-heading: var(--color-foreground);
+    --color-button-text: var(--color-overlay);
+    --color-button-border: var(--color-foreground);
+    --color-button-background: var(--color-foreground);
+    --color-shadow: var(--color-foreground);
+    --shadow-opacity: 0.3;
+  }
+
+  body, .color-option-1, .color-option-2, .color-option-3 {
+    color: rgba(var(--color-foreground), 0.75);
+    background-color: rgb(var(--color-background));
+  }
+
+  color: var(--global-color-text);
+  font-family: var(--global-typography-text-font-family), sans-serif;
+  font-size: var(--global-typography-text-font-size);
+  font-weight: var(--global-typography-text-font-weight);
+  text-transform: var(--global-typography-text-text-transform);
+
+  .page-width {
+    max-width: var(--page-width);
+    margin: 0 auto;
+    padding: 0 30px;
+  }
+
+  .page-width-desktop {
+    padding: 0;
+    margin: 0 auto;
+  }
+
+  .page-width--full-width {
+    max-width: 100%;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .center {
+    text-align: center;
+  }
+
+  .left {
+    text-align: start;
+  }
+
+  .right {
+    text-align: end;
+  }
+
+  @media screen and (max-width: 749px) {
+    .mobile-center {
+      text-align: center;
+    }
+
+    .mobile-left {
+      text-align: start;
+    }
+
+    .mobile-right {
+      text-align: end;
+    }
+  }
+}
+
+.app-kit h1 {
+  color: var(--global-color-primary);
+  font-family: var(--global-typography-primary-font-family), sans-serif;
+  font-size: var(--global-typography-primary-font-size);
+  font-weight: var(--global-typography-primary-font-weight);
+  line-height: var(--global-typography-primary-line-height);
+  margin:0;
+}
+
+.app-kit h2 {
+  color: var(--global-color-primary);
+  font-family: var(--global-typography-secondary-font-family), sans-serif;
+  font-size: var(--global-typography-secondary-font-size);
+  font-weight: var(--global-typography-secondary-font-weight);
+  line-height: var(--global-typography-secondary-line-height);
+  margin: 0;
+}
+
+.app-kit h3 {
+  color: var(--global-color-primary);
+  font-family: var(--global-typography-103-font-family), sans-serif;
+  font-size: var(--global-typography-103-font-size);
+  font-weight: var(--global-typography-103-font-weight);
+  line-height: var(--global-typography-103-line-height);
+}
+
+.app-kit h4 {
+  font-family: var(--global-typography-101-font-family), sans-serif;
+  font-size: var(--global-typography-101-font-size);
+  font-weight: var(--global-typography-101-font-weight);
+  line-height: var(--global-typography-101-line-height);
+  color: var(--global-color-primary);
+}
+
+.gradient {
+  background: rgb(var(--color-background)) fixed;
+}
+
+.app-kit .button-primary {
+  appearance: button;
+  display: inline-block;
+  background: #456F49;
+  border-radius: var(--buttons-radius);
+  padding: 15px 40px;
+  text-align: center;
+  width: auto;
+  max-width: 100%;
+  border: none;
+  color: white !important;
+  font-family: var(--global-typography-text-primary-font-family), sans-serif;
+  font-size: var(--global-typography-text-primary-font-size);
+  font-weight: var(--global-typography-text-primary-font-weight);
+  line-height: var(--global-typography-text-primary-font-line-height);
+  outline: none;
+  cursor: pointer;
+  max-height: 51px;
+  transition: all var(--duration-default) ease-in-out;
+}
+
+.app-kit .button-primary.full__width {
+  width: 100%;
+}
+
+.app-kit .button-primary:focus, .app-kit .button-primary:active {
+  outline: none;
+}
+
+.app-kit .button-primary:hover {
+  background: #55885a;
+}
+
+.app-kit .button-primary.md,
+.app-kit .button-primary-outline.md {
+  max-height: 53px;
+}
+
+.app-kit .button-primary-outline {
+  appearance: button;
+  display: inline-block;
+  background-color: #72091700;
+  border-radius: var(--buttons-radius);
+  padding: 15px 40px;
+  text-align: center;
+  width: auto;
+  max-width: 100%;
+  border: 1px solid #6cac72;
+  color: var(--global-color-text) !important;
+  font-family: var(--global-typography-text-primary-font-family), sans-serif;
+  font-size: var(--global-typography-text-primary-font-size);
+  font-weight: var(--global-typography-text-primary-font-weight);
+  line-height: var(--global-typography-text-primary-font-line-height);
+  outline: none;
+  cursor: pointer;
+  max-height: 51px;
+  transition: all var(--duration-default) ease-in-out;
+}
+
+.app-kit .button-primary-outline:hover {
+  color: rgba(20, 20, 21, 0.5) !important;
+}
+
+.list-menu__item {
+  display: flex !important;
+  align-items: center;
+  line-height: calc(1 + 0.3 / var(--font-body-scale)) !important;
+}
+
+.list-menu__item label {
+  line-height: calc(1 + 0.3 / var(--font-body-scale)) !important;
+}
+
+.list-menu__item--link {
+  text-decoration: none;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  line-height: calc(1 + 0.8 / var(--font-body-scale));
+}
+
+.overflow-hidden-tablet {
+  overflow: hidden !important;
+}
+
+.overflow-hidden-mobile {
+  overflow: hidden !important;
+}
+
+.overflow-hidden-tablet:after {
+  content: "";
+  background: rgba(0, 0, 0, .7);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  cursor: default;
+  animation: fadeInOverlay 0.5s ease-in-out;
+}
+
+@keyframes fadeInOverlay {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.ap-element-button {
+  cursor: pointer;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.app-kit .link {
+  cursor: pointer;
+  display: inline-block;
+  border: none;
+  box-shadow: none;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  color: rgb(var(--color-link)) !important;
+  background-color: transparent;
+  font-size: calc(var(--font-body-scale) * 16px);
+  font-family: var(--global-typography-text-font-family), sans-serif;
+  font-weight: var(--global-typography-text-font-weight) !important;
+}
+
+.path {
+  stroke-dasharray: 280;
+  stroke-dashoffset: 0;
+  transform-origin: center;
+  stroke: black;
+  animation: dash 1.4s ease-in-out infinite;
+}
+
+.path.light {
+  stroke: white;
+}
+
+@media screen and (forced-colors: active) {
+  .path {
+    stroke: CanvasText;
+  }
+}
+
+@keyframes dash {
+  0% {
+    stroke-dashoffset: 280;
+  }
+  50% {
+    stroke-dashoffset: 75;
+    transform: rotate(135deg);
+  }
+  100% {
+    stroke-dashoffset: 280;
+    transform: rotate(450deg);
+  }
+}
+
+/*=================================== Media ================================*/
+@media screen and (min-width: 1025px) {
+  .app-kit .page-width {
+    padding: 0 100px;
+  }
+}
+
+@media screen and (min-width: 990px) {
+
+  .page-width--inner {
+    padding: 0 150px;
+  }
+
+  .page-width-desktop {
+    padding: 0;
+  }
+
+  .page-width-tablet {
+    padding: 0 50px;
+  }
+
+  .page-width--narrow {
+    padding: 0 90px;
+  }
+
+  .page-width--narrow {
+    max-width: 920px;
+    padding: 0;
+  }
+
+  .page-width-desktop {
+    max-width: var(--page-width);
+    padding: 0 50px;
+  }
+}
+
+@media screen and (min-width: 750px) {
+  .page-width.page-width__default {
+    padding: 0 50px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .app-kit {
+    --global-typography-text-font-size: 14px;
+    --global-typography-text-font-line-height: 18px;
+    --global-typography-accent-font-size: 16px;
+    --global-typography-accent-line-height: 22px;
+    --global-typography-accent-2-font-size: 14px;
+    --global-typography-accent-2-line-height: 19px;
+    --global-typography-text-primary-font-size: 18px;
+    --global-typography-text-primary-font-line-height: 23px;
+    --global-typography-text-secondary-font-size: 14px;
+    --global-typography-text-secondary-font-line-height: 18px;
+    --global-typography-text-100-font-size: 20px;
+    --global-typography-text-100-font-line-height: 26px;
+    --global-typography-text-italic-font-family: "Montserrat";
+    --global-typography-text-italic-font-size: 14px;
+    --global-typography-text-italic-font-line-height: 19px;
+    --global-typography-primary-font-size: 50px;
+    --global-typography-primary-line-height: 65px;
+    --global-typography-secondary-font-size: 38px;
+    --global-typography-secondary-line-height: 49px;
+    --global-typography-101-font-size: 30px;
+    --global-typography-101-line-height: 40px;
+    --global-typography-102-font-size: 36px;
+    --global-typography-102-line-height: 47px;
+    --global-typography-103-font-size: 24px;
+    --global-typography-103-line-height: 32px;
+    font-size: var(--global-typography-text-font-size);
+  }
+
+  .app-kit h1 {
+    color: var(--global-color-primary);
+    font-family: var(--global-typography-primary-font-family), sans-serif;
+    font-size: var(--global-typography-primary-font-size);
+    font-weight: var(--global-typography-primary-font-weight);
+    line-height: var(--global-typography-primary-line-height);
+  }
+
+  .app-kit h2 {
+    color: var(--global-color-text);
+    font-family: var(--global-typography-secondary-font-family), sans-serif;
+    font-size: var(--global-typography-secondary-font-size);
+    font-weight: var(--global-typography-secondary-font-weight);
+    line-height: var(--global-typography-secondary-line-height);
+  }
+
+  .app-kit h3 {
+    color: var(--global-color-text);
+    font-family: var(--global-typography-101-font-family), sans-serif;
+    font-size: var(--global-typography-101-font-size);
+    font-weight: var(--global-typography-101-font-weight);
+    line-height: var(--global-typography-101-line-height);
+  }
+}
+
+@media (max-width: 1024px) {
+  .app-kit .button-primary,
+  .app-kit .button-primary-outline {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .app-kit {
+    --global-typography-text-font-size: 12px;
+    --global-typography-text-font-line-height: 16px;
+    --global-typography-accent-font-size: 14px;
+    --global-typography-accent-line-height: 20px;
+    --global-typography-accent-2-font-size: 12px;
+    --global-typography-accent-2-line-height: 17px;
+    --global-typography-text-primary-font-size: 14px;
+    --global-typography-text-primary-font-line-height: 21px;
+    --global-typography-text-secondary-font-size: 12px;
+    --global-typography-text-secondary-font-line-height: 16px;
+    --global-typography-text-100-font-size: 16px;
+    --global-typography-text-100-font-line-height: 21px;
+    --global-typography-text-italic-font-size: 12px;
+    --global-typography-text-italic-font-line-height: 17px;
+    --global-typography-primary-font-size: 40px;
+    --global-typography-primary-line-height: 55px;
+    --global-typography-secondary-font-size: 28px;
+    --global-typography-secondary-line-height: 39px;
+    --global-typography-101-font-size: 26px;
+    --global-typography-101-line-height: 36px;
+    --global-typography-102-font-size: 32px;
+    --global-typography-102-line-height: 37px;
+    --global-typography-103-font-size: 18px;
+    --global-typography-103-line-height: 26px;
+    font-size: var(--global-typography-text-font-size);
+
+    .page-width {
+      padding: 0 15px;
+    }
+  }
+
+  .app-kit h1 {
+    color: var(--global-color-primary);
+    font-family: var(--global-typography-primary-font-family), sans-serif;
+    font-size: var(--global-typography-primary-font-size);
+    font-weight: var(--global-typography-primary-font-weight);
+    line-height: var(--global-typography-primary-line-height);
+  }
+
+  .app-kit h2 {
+    color: var(--global-color-text);
+    font-family: var(--global-typography-secondary-font-family), sans-serif;
+    font-size: var(--global-typography-secondary-font-size);
+    font-weight: var(--global-typography-secondary-font-weight);
+    line-height: var(--global-typography-secondary-line-height);
+  }
+
+  .app-kit h3 {
+    color: var(--global-color-text);
+    font-family: var(--global-typography-101-font-family), sans-serif;
+    font-size: var(--global-typography-101-font-size);
+    font-weight: var(--global-typography-101-font-weight);
+    line-height: var(--global-typography-101-line-height);
+  }
+}

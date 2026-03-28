@@ -1,0 +1,106 @@
+<main id="MadJunAuthorization">
+ <section class="section authorization-section gradient">
+  <div class="page-width">
+    <div class="authorization-section__wrapper wrapper">
+      <div class="authorization-form">
+        <div class="heading-editor-subtitle">
+          <h2 class="heading-title">Войти в личный кабинет</h2>
+        </div>
+
+        <!-- Form -->
+        <form class="MadJun__form form color-option-4"
+              [formGroup]="loginForm"
+              (ngSubmit)="onSubmit()"
+              novalidate>
+          @if (formError) {
+            <div class="form-error">
+              <span>{{ errorMsg }}</span>
+            </div>
+          }
+
+          <!-- Email -->
+          <div class="field field--with-error">
+            <input
+              formControlName="email"
+              class="field-input"
+              type="email"
+              placeholder="Электронная почта"
+              id="MadJunAuth-email"
+              required>
+            @if (email?.errors?.['required'] && (email?.dirty || email?.touched)) {
+              <span class="invalid-feedback">*Обязательное поле</span>
+            } @else if ((email?.errors?.['email'] && (email?.dirty || email?.touched))) {
+              <span class="invalid-feedback">Неверный эл. адрес</span>
+            }
+            <label for="MadJunAuth-email" class="field-label">Электронная почта</label>
+          </div>
+          <!-- Password -->
+          <div class="field field--with-error">
+            <input
+              formControlName="password"
+              class="field-input"
+              [type]="inputType"
+              placeholder="Пароль"
+              id="MadJunAuth-password"
+              required>
+            @if (password?.errors?.['required'] && (password?.dirty || password?.touched)) {
+              <span class="invalid-feedback">*Обязательное поле</span>
+            } @else if ((password?.errors?.['minlength'] && (password?.dirty || password?.touched))) {
+              <span class="invalid-feedback">Не меньше 8 символов</span>
+            }
+            <label for="MadJunAuth-password" class="field-label">Пароль</label>
+            <a (click)="eye()" class="eye-button"><i class="fa-solid fa-eye"></i></a>
+          </div>
+          <!--  Remember me -->
+          <div class="input-field-wrapper input-field__checkbox-wrapper">
+            <div class="checkbox-wrapper">
+              <input
+                formControlName="remember"
+                class="input-field-checkbox"
+                type="checkbox"
+                id="MadJunAuth-remember">
+              <div class="checkbox-icon-wrapper">
+                <span>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14" focusable="false"
+                       aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                          d="m1.5 7.097 3.596 3.602c.104.105.156.157.216.175a.25.25 0 0 0 .16-.004c.059-.022.108-.077.206-.188L12.5 3">
+                    </path>
+                  </svg>
+                </span>
+              </div>
+            </div>
+            <label for="MadJunAuth-remember">Запомнить меня</label>
+          </div>
+          <!-- Button -->
+          <div class="input-field-wrapper button-submit-wrapper color-option-5" [class.loading]="processing">
+            <button class="button-primary full__width"><span>Войти</span></button>
+            <div class="loading-overlay">
+              <div class="loading-overlay__spinner">
+                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" role="presentation" fill="none"
+                     viewBox="0 0 66 66" class="icon icon-spinner">
+                  <circle fill="none" stroke-width="6" cx="33" cy="33" r="30" class="path light"></circle>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </form>
+        <!-- Signup -->
+        <div class="rich-text wrapper color-option-5">
+          <div class="rich-text__blocks left mobile-left">
+            <div class="typeset rte">
+                <p>
+                  Нет аккаунта?
+                  <a [routerLink]="['/signup']">Пройдите регистрацию</a>
+                </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="authorization-banner">
+        <img src="/assets/images/Image-Banner-1.jpg" alt="Banner">
+      </div>
+    </div>
+  </div>
+ </section>
+</main>

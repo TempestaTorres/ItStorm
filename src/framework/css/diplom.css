@@ -1,0 +1,207 @@
+.header__icon .icon-title {
+  display: inline-block;
+  margin-left: 7px;
+  width: auto!important;
+  height: auto!important;
+}
+
+.text-editor-primary .text-caption {
+  font-family: var(--global-typography-accent-font-family), sans-serif;
+  font-size: var(--global-typography-accent-font-size);
+  font-weight: var(--global-typography-accent-font-weight);
+  line-height: var(--global-typography-accent-font-line-height);
+  color: var(--global-color-text);
+  margin: 0;
+}
+.text-editor-secondary .text-caption {
+  font-family: var(--global-typography-text-secondary-font-family), sans-serif;
+  font-size: var(--global-typography-text-secondary-font-size);
+  font-weight: var(--global-typography-text-secondary-font-weight);
+  line-height: var(--global-typography-text-secondary-font-line-height);
+  color: var(--global-color-text);
+  margin: 0;
+}
+.text-caption.small {
+  font-size: var(--global-typography-text-font-size);
+}
+.heading-editor {
+  width: 100%;
+}
+.heading-editor-primary .heading-title{
+  font-family: var(--global-typography-secondary-font-family), sans-serif;
+  font-size: var(--global-typography-secondary-font-size);
+  font-weight: var(--global-typography-secondary-font-weight);
+  line-height: var(--global-typography-secondary-line-height);
+  color: var(--global-color-text);
+  margin: 0;
+}
+.heading-editor-secondary .heading-title{
+  font-family: var(--global-typography-101-font-family), sans-serif;
+  font-size: var(--global-typography-101-font-size);
+  font-weight: var(--global-typography-101-font-weight);
+  line-height: var(--global-typography-101-line-height);
+  color: var(--global-color-text);
+  margin: 0;
+}
+.heading-editor-subtitle .heading-title{
+  font-family: var(--global-typography-102-font-family), sans-serif;
+  font-size: var(--global-typography-102-font-size);
+  font-weight: var(--global-typography-102-font-weight);
+  line-height: var(--global-typography-102-line-height);
+  color: var(--global-color-primary);
+  margin: 0;
+}
+/*list with icon */
+.list-with-icon {
+  width: 100%;
+  max-width: 442px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap:30px;
+}
+.list-with-icon .list-icon {
+  display: block;
+  width: 70px;
+  height: 70px;
+}
+.list-with-icon .list-icon svg {
+  fill:none;
+  width: 100%;
+  height: 100%;
+}
+.list-with-icon ol,
+.list-with-icon ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+.list-with-icon li {
+  color: black;
+  font-family: inherit;
+}
+.list-with-icon li:not(:last-child) {
+  margin-bottom: 10px;
+}
+.list-with-icon li p {
+  margin: 0;
+}
+.list-with-icon .description {
+  font-family: var(--global-typography-text-italic-font-family), sans-serif;
+  font-size: var(--global-typography-text-italic-font-size);
+  font-weight: var(--global-typography-text-italic-font-weight);
+  line-height: var(--global-typography-text-italic-font-line-height);
+  font-style: italic;
+  color: black;
+  margin: 8px 0 6px 0;
+}
+.heading-editor .image-with-text__heading {
+  color:rgb(var(--color-foreground));
+}
+/* ======= Form ===========*/
+.MadJun__form {
+  --inputs-border-width: 2px;
+  --inputs-radius:3px;
+  --inputs-radius-outset: 3px;
+  --color-base-border-1:var(--global-color-primary);
+  --inputs-border-opacity: 0.4;
+  --inputs-shadow-opacity: 0.4;
+  --color-link:81, 144, 87;
+
+  width: 100%;
+  max-width: 100%;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  background-color: transparent;
+
+  .field {
+    margin-bottom: 5px;
+    background-color: transparent;
+  }
+  .field-input {
+    height: 53px!important;
+    padding: 20px!important;
+    color: black!important;
+  }
+
+  .field-label {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 6s steps(60, end) infinite;
+    font-size: 14px;
+    left: calc(var(--inputs-border-width) + 19px);
+    top: calc(18px + var(--inputs-border-width));
+  }
+  .field-input:focus ~ .field-label, .field-input:not(:placeholder-shown) ~ .field-label {
+    left: calc(var(--inputs-border-width) + 19px) !important;
+  }
+
+  .field-input:focus-visible,
+  .field-input:active{
+    box-shadow:0 0 0 1px var(--color-base-border-1) inset;
+  }
+  .button-submit-wrapper {
+    margin-top: 20px;
+  }
+  .button-submit-wrapper .loading-overlay {
+    left: 50%;
+    top: calc(50% - 8px);
+    display:none;
+  }
+  .button-submit-wrapper.loading .loading-overlay {
+    display:block;
+  }
+  .button-submit-wrapper.loading button span {
+    opacity: 0;
+  }
+  .button-submit-wrapper .loading-overlay .loading-overlay__spinner {
+    width:100%
+  }
+  .input-field__checkbox-wrapper {
+    padding: 5px 0 20px 0;
+  }
+}
+.invalid-feedback {
+  left: calc(var(--inputs-border-width) + 19px)!important;
+}
+.form-error {
+  width: 100%;
+  color: var(--color-critical);
+  font-size: 13px;
+  text-align: center;
+  margin-bottom: 8px;
+}
+#MadJunAuthorization {
+  .authorization-section {
+    --color-background: 255, 255, 255;
+    min-height: 100vh;
+    padding-top: 106px;
+  }
+
+  .authorization-section__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-auto-flow: column;
+    grid-template-areas: "authorization banner";
+    align-items: center;
+  }
+  .authorization-form {
+    grid-area: authorization;
+    max-width: 430px;
+  }
+  .authorization-banner {
+    grid-area: banner;
+  }
+  .authorization-form .heading-title {
+    margin-bottom: 40px;
+  }
+}
+.eye-button {
+  position: absolute;
+  right: calc(18px + var(--inputs-border-width));
+  top: calc(18px + var(--inputs-border-width));
+  cursor: pointer;
+}

@@ -1,0 +1,93 @@
+/* Swiper widget*/
+.app-widget-image-carousel-wrapper {
+  position: relative;
+  width: 100%;
+}
+.app-widget-image-carousel .swiper,
+.app-widget-image-carousel .swiper-container {
+  position:static
+}
+.app-widget-image-carousel .swiper-container .swiper-slide figure,
+.app-widget-image-carousel .swiper .swiper-slide figure {
+  line-height:inherit
+}
+.app-widget-image-carousel .swiper-slide {
+  text-align:center
+}
+.app-image-carousel-wrapper:not(.swiper-container-initialized):not(.swiper-initialized) .swiper-slide {
+  max-width:calc(100% / var(--image-carousel-slides-to-show, 3))
+}
+.app-widget-image-carousel {
+  --image-carousel-slides-to-show:1;
+}
+.app-widget-image-carousel .swiper-pagination-bullet {
+  width:6px;
+  height:6px;
+  background:var( --global-color-primary );
+}
+.app-widget-image-carousel .app-image-carousel-wrapper .app-image-carousel .swiper-slide-image {
+  border-radius:0;
+}
+.swiper-buttons-wrap {
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+.swiper__button {
+  cursor: pointer;
+}
+.swiper__button svg {
+  width: 16px;
+  height: 16px;
+  fill: rgba(233,227,218,1);
+}
+.swiper__button.swiper-button-disabled svg {
+  fill: rgba(0,0,0,.08);
+}
+.carousel-swiper-related .swiper-button-next,
+.carousel-swiper-related .swiper-button-prev {
+  background-image: none;
+  width: 16px;
+  height: 16px;
+}
+
+.carousel-swiper-related .swiper-button-next,
+.carousel-swiper-related .swiper-button-prev {
+  position: relative;
+  top: auto;
+  left: initial;
+  transform: none;
+  margin-top: 18px;
+}
+
+@media (hover: hover) and (pointer: fine) {
+
+  .carousel-swiper-related .swiper-button-next:hover,
+  .carousel-swiper-related .swiper-button-prev:hover {
+    background-color: transparent;
+  }
+}
+.carousel-swiper-related .swiper-button-next svg, .carousel-swiper-related .swiper-button-prev svg {
+  width: 16px;
+  height: 16px;
+}
+.carousel-swiper-related .swiper-button-next {
+  right: auto;
+}
+.carousel-swiper-related .swiper-button-prev {
+  right: auto;
+}
+.carousel-swiper-related .swiper-button-disabled {
+  opacity: 1 !important;
+}
+.carousel-swiper-related .swiper-button-disabled svg {
+  color: rgba(0, 0, 0, 0.08);
+}
+.carousel-swiper-related .swiper-slide {
+  width: 100%;
+  height: auto;
+}

@@ -1,0 +1,109 @@
+<div class="modal_dialog_wrapper" [class.show]="dialogOpened" [class.closed]="closing">
+  <div class="modal_dialog">
+    <div class="modal_dialog__fullscreen">
+      <div class="modal_dialog__content-wrapper">
+        <div class="inner">
+          <!-- Close Button -->
+          <span
+            (click)="closeModal()"
+            class="modal_dialog__close-btn private-reset">
+            <svg role="img" width="30" height="30" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"
+                 aria-hidden="true"
+                 class="private-reset">
+              <title id="title-Close-dialog">Close dialog</title>
+              <circle
+              style="cursor: pointer;" cx="10" cy="10" r="9.5" fill="rgba(255,255,255,1)"
+              stroke="rgba(255,255,255,0)">
+              </circle>
+              <path style="cursor: pointer;" d="M6 6L14 14M6 14L14 6L6 14Z"
+                stroke="#bebebe" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round">
+              </path>
+            </svg>
+          </span>
+          <!-- Inner content -->
+          <div class="inner-content">
+            @if (!confirmed) {
+
+              <!-- Heading -->
+              <div class="modal-heading center">
+                @if (modalType === 'consultation') {
+                  <h2 class="heading-title">Закажите бесплатную консультацию!</h2>
+                } @else {
+                  <h2 class="heading-title">Заявка на услугу</h2>
+                }
+              </div>
+              <!-- Form -->
+              <form class="MadJun__form form color-option-4"
+                    (ngSubmit)="onSubmit()"
+                    [formGroup]="modalForm" novalidate>
+
+              @if (formError) {
+                <div class="form-error">
+                  <span>{{ errorMsg }}</span>
+                </div>
+              }
+
+              <!-- Name -->
+              <div class="field field--with-error">
+                <input
+                  formControlName="name"
+                  class="field-input"
+                  type="text"
+                  placeholder="Ваше имя"
+                  id="MadJunService-name"
+                  required>
+                @if (name?.errors?.['required'] && (name?.dirty || name?.touched)) {
+                  <span class="invalid-feedback">*Обязательное поле</span>
+                }
+                <label for="MadJunService-name" class="field-label">Ваше имя</label>
+              </div>
+              <!-- Phone -->
+              <div class="field field--with-error">
+                <input
+                  formControlName="phone"
+                  class="field-input"
+                  type="tel"
+                  placeholder="Ваш номер телефона"
+                  id="MadJunService-phone"
+                  required>
+                @if (phone?.errors?.['required'] && (phone?.dirty || phone?.touched)) {
+                  <span class="invalid-feedback">*Обязательное поле</span>
+                }@else if (phone?.errors?.['pattern'] && (phone?.dirty || phone?.touched)) {
+                  <span class="invalid-feedback">Неверный номер</span>
+                }
+                <label for="MadJunService-phone" class="field-label">Ваш номер телефона</label>
+              </div>
+              <!-- Button -->
+              <div class="input-field-wrapper button-submit-wrapper color-option-5" [class.loading]="processing">
+                <button class="button-primary full__width"><span>{{ buttonLabel }}</span></button>
+                <div class="loading-overlay">
+                  <div class="loading-overlay__spinner">
+                    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" role="presentation" fill="none"
+                         viewBox="0 0 66 66" class="icon icon-spinner">
+                      <circle fill="none" stroke-width="6" cx="33" cy="33" r="30" class="path light"></circle>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              </form>
+
+            } @else {
+              <!-- Heading -->
+              <div class="modal-heading center">
+                <h2 class="heading-title">Спасибо за вашу заявку!</h2>
+              </div>
+              <div class="text-editor-secondary modal-text-editor center">
+                <p class="text-caption">Мы свяжемся с вами при первой же возможности.</p>
+              </div>
+              <div class="color-option-5 button-wrapper">
+                <button (click)="closeModal()" type="button" class="button-primary button-ok"><span>Окей</span></button>
+              </div>
+            }
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

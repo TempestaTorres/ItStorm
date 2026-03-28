@@ -1,0 +1,132 @@
+.accordion summary {
+  line-height: 1;
+  padding: 15px 0;
+  cursor: pointer;
+  list-style: none;
+  position: relative;
+}
+summary .icon-caret {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  margin-top: -3px;
+  height: 6px;
+  transition: transform var(--duration-default) ease;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+.accordion .summary__title {
+  display: flex;
+  flex: 1;
+}
+
+.accordion + .accordion {
+  margin-top: 0!important;
+  border-top: none;
+}
+
+.accordion {
+  margin-top: 25px;
+  margin-bottom: 0;
+  border-top: 1px solid rgb(var(--color-border));
+  border-bottom: 1px solid rgb(var(--color-border));
+}
+
+.accordion__title {
+  display: inline-block;
+  max-width: calc(100% - 60px);
+  min-height: 16px;
+  margin: 0;
+  word-break: break-word;
+}
+
+.accordion .summary__title .icon {
+  flex: 0 0 auto;
+  align-self: center;
+  fill: rgb(var(--color-foreground));
+  width: 16px;
+  height: 16px;
+  margin-inline-end: 12px;
+}
+
+.accordion details[open] > summary .icon-caret {
+  transform: scaleY(-1);
+}
+
+.accordion__content {
+  margin-bottom: 15px;
+  word-break: break-word;
+}
+
+.accordion__content img {
+  max-width: 100%;
+}
+/* No Js accordion */
+.product__accordion .summary__title {
+  padding: 0 15px;
+}
+
+.product__accordion .accordion__title {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  display: flex;
+  align-items: center;
+  max-width: 100%;
+}
+
+.product__accordion .accordion__content {
+  padding: 0 15px;
+  font-size: 14px;
+  opacity: 0;
+}
+
+.product__accordion details[open] .accordion__content {
+  opacity: 1;
+  animation: appear-down var(--duration-long) ease;
+}
+
+.product__accordion + .product-link__button {
+  margin-top: 0;
+  border-top: 0;
+}
+
+.product-link__button {
+  border-top: 1px solid rgb(var(--color-border));
+  border-bottom: 1px solid rgb(var(--color-border));
+}
+
+.product-link__button a {
+  line-height: 1;
+  padding: 15px 0;
+  display: block;
+  position: relative;
+  text-decoration: none;
+  color: rgb(var(--color-foreground));
+}
+
+.product-link__button .summary__title {
+  display: flex;
+  flex: 1;
+}
+
+.product-link__button .accordion__title {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  display: flex;
+  align-items: center;
+  max-width: 100%;
+}
+
+.product-link__button .icon-caret {
+  position: absolute;
+  top: 50%;
+  margin-top: -0.3rem;
+  right: 1.5rem;
+  height: 0.6rem;
+  transform: rotate(-90deg);
+}

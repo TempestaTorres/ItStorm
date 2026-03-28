@@ -1,0 +1,993 @@
+/* Use eicons font */
+/* Layout example
+
+<!-- Options -->
+            <ul class="list-unstyled payment-options__options-list app-radio-checkbox-widget" role="list">
+              <!-- Option item Card -->
+              <li class="field-type-radio type-dotCircle field-group style-1" role="listitem">
+                <div class="field-subgroup subgroup-inline">
+                  <span class="field-option">
+                    <input class="type-input" type="radio" value="card" name="payment-option" id="radio-1">
+                    <label class="type-dotci" for="radio-1">Credit card<span></span></label>
+                  </span>
+                </div>
+              </li>
+
+              <!-- Option item -->
+              <li class="field-type-checkbox type-round field-group style-1" role="listitem">
+                <div class="field-subgroup">
+                  <span class="field-option">
+                    <input class="type-input" type="checkbox" value="cash" name="payment-option" id="chk-4">
+                    <label class="type-sub-round" for="chk-4">Style
+                      <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14" focusable="false"
+                             aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round"
+                            d="m1.5 7.097 3.596 3.602c.104.105.156.157.216.175a.25.25 0 0 0 .16-.004c.059-.022.108-.077.206-.188L12.5 3"></path>
+                        </svg>
+                      </span>
+                    </label>
+                  </span>
+                </div>
+              </li>
+              <!-- Option Switcher -->
+              <li class="field-type-checkbox type-switcher field-group style-1" role="listitem">
+                <div class="field-subgroup">
+                  <span class="field-option">
+                    <input class="type-input" type="checkbox" value="cash" name="payment-option" id="chk-5">
+                    <label class="type-sub-swtch" for="chk-5">Switcher
+                      <span></span>
+                    </label>
+                  </span>
+                </div>
+              </li>
+              <!-- Option Dot Square -->
+              <li class="field-type-checkbox type-dotSquare field-group style-1" role="listitem">
+                <div class="field-subgroup">
+                  <span class="field-option">
+                    <input class="type-input" type="checkbox" value="cash" name="payment-option" id="chk-6">
+                    <label class="type-dotsq" for="chk-6">Square
+                      <span></span>
+                    </label>
+                  </span>
+                </div>
+              </li>
+              <!-- Option Square -->
+              <li class="field-type-checkbox type-square field-group style-1" role="listitem">
+                <div class="field-subgroup">
+                  <span class="field-option">
+                    <input class="type-input" type="checkbox" value="cash" name="payment-option" id="chk-7">
+                    <label class="type-sub-square" for="chk-7">Square
+                      <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14" focusable="false"
+                             aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round"
+                                                      d="m1.5 7.097 3.596 3.602c.104.105.156.157.216.175a.25.25 0 0 0 .16-.004c.059-.022.108-.077.206-.188L12.5 3"></path>
+                        </svg>
+                      </span>
+                    </label>
+                  </span>
+                </div>
+              </li>
+              <!-- Option Square -->
+              <li class="field-type-checkbox type-checklist field-group style-1" role="listitem">
+                <div class="field-subgroup">
+                  <span class="field-option">
+                    <input class="type-input" type="checkbox" value="cash" name="payment-option" id="chk-8">
+                    <label class="type-sub-checklist" for="chk-8">Square<span></span></label>
+                  </span>
+                </div>
+              </li>
+            </ul>
+*/
+
+
+.app-radio-checkbox-widget {
+  --field-background-color: #ffffff;
+  --global-color: #7C8492;
+}
+
+.app-radio-checkbox-widget .field-group {
+  padding-right:calc(15px/2);
+  padding-left:calc(15px/2);
+  margin-bottom:16px
+}
+.app-radio-checkbox-widget .form-fields-wrapper {
+  margin-left:calc(-15px/2);
+  margin-right:calc(-15px/2);
+  margin-bottom:-16px
+}
+.app-radio-checkbox-widget .labels-inline .field-group > label {
+  padding-left:0
+}
+.app-radio-checkbox-widget .labels-above .field-group > label {
+  padding-bottom:0
+}
+.app-radio-checkbox-widget .field-group .icon_div > i,
+.app-radio-checkbox-widget .field-group .icon_div > svg {
+  --lsfef-icon-size:30px
+}
+.app-radio-checkbox-widget .field-group {
+  display: flex;
+  align-items:center;
+  flex-wrap:wrap
+}
+.app-radio-checkbox-widget .field-group.field-type-submit {
+  align-items:flex-end
+}
+.app-radio-checkbox-widget .field-group .field-textual {
+  background-color:transparent;
+  border:1px solid #69727d;
+  color:#1f2124;
+  flex-grow:1;
+  max-width:100%;
+  vertical-align:middle;
+  width:100%
+}
+.app-radio-checkbox-widget .field-group .field-textual:focus {
+  box-shadow:inset 0 0 0 1px rgba(0,0,0,.1);
+  outline:0
+}
+.app-radio-checkbox-widget .field-group .field-textual::-moz-placeholder {
+  color:inherit;
+  font-family:inherit;
+  opacity:.6
+}
+.field-group .field-textual::placeholder {
+  color:inherit;
+  font-family:inherit;
+  opacity:.6
+}
+.app-radio-checkbox-widget .field-group .select-wrapper {
+  display:flex;
+  position:relative;
+  width:100%
+}
+.app-radio-checkbox-widget .field-group .select-wrapper select {
+  appearance:none;
+  color:inherit;
+  flex-basis:100%;
+  font-family:inherit;
+  font-size:inherit;
+  font-style:inherit;
+  font-weight:inherit;
+  letter-spacing:inherit;
+  line-height:inherit;
+  padding-inline-end:20px;
+  text-transform:inherit
+}
+.app-radio-checkbox-widget .field-group .select-wrapper:before {
+  content:"\e92a";
+  font-family:eicons;
+  font-size:15px;
+  inset-block-start:50%;
+  inset-inline-end:10px;
+  pointer-events:none;
+  position:absolute;
+  text-shadow:0 0 3px rgba(0,0,0,.3);
+  transform:translateY(-50%)
+}
+.app-radio-checkbox-widget .field-group.field-type-select-multiple .select-wrapper:before {
+  content:""
+}
+.app-radio-checkbox-widget .field-subgroup {
+  display:flex;
+  flex-wrap:wrap
+}
+.app-radio-checkbox-widget .field-subgroup .field-option label {
+  display:inline-block
+}
+.app-radio-checkbox-widget .field-subgroup.subgroup-inline .field-option {
+  padding-inline-end:10px
+}
+.app-radio-checkbox-widget .field-subgroup:not(.subgroup-inline) .field-option {
+  flex-basis:100%
+}
+.field-type-acceptance .field-subgroup .field-option input,
+.field-type-acceptance .field-subgroup .field-option label,
+.field-type-checkbox .field-subgroup .field-option input,
+.field-type-checkbox .field-subgroup .field-option label,
+.field-type-radio .field-subgroup .field-option input,
+.field-type-radio .field-subgroup .field-option label {
+  display:inline
+}
+.app-radio-checkbox-widget .field-label {
+  cursor:pointer
+}
+.app-radio-checkbox-widget .mark-required .field-label:after {
+  color:red;
+  content:"*";
+  padding-inline-start:.2em
+}
+.app-radio-checkbox-widget .field-textual {
+  border-radius:3px;
+  font-size:15px;
+  line-height:1.4;
+  min-height:40px;
+  padding:5px 14px
+}
+.app-radio-checkbox-widget .field-textual.size-xs {
+  border-radius:2px;
+  font-size:13px;
+  min-height:33px;
+  padding:4px 12px
+}
+.app-radio-checkbox-widget .field-textual.size-md {
+  border-radius:4px;
+  font-size:16px;
+  min-height:47px;
+  padding:6px 16px
+}
+.app-radio-checkbox-widget .field-textual.size-lg {
+  border-radius:5px;
+  font-size:18px;
+  min-height:59px;
+  padding:7px 20px
+}
+.app-radio-checkbox-widget .field-textual.size-xl {
+  border-radius:6px;
+  font-size:20px;
+  min-height:72px;
+  padding:8px 24px
+}
+.app-radio-checkbox-widget :where(.field-type-radio,
+.field-type-checkbox).field-group {
+  --radio-size:0px;
+  --radio-default-color:var( --global-color );
+  --radio-color:var( --global-color )
+}
+
+.app-radio-checkbox-widget {
+  .style-1 {
+    --radio-color: #2A592E;
+  }
+}
+  /*=========================*/
+
+  :where(.field-type-radio,
+.field-type-checkbox).type-square * {
+    box-sizing: border-box
+  }
+
+  :where(.field-type-radio,
+.field-type-checkbox).type-square .type-sub-square {
+    -webkit-user-select: none;
+    user-select: none;
+    cursor: pointer;
+    padding: 6px 8px;
+    border-radius: 6px;
+    overflow: hidden;
+    transition: all .2s ease;
+    display: inline-block
+  }
+
+  :where(.field-type-radio,
+.field-type-checkbox).type-square .type-sub-square:not(:last-child) {
+    margin-right: 6px
+  }
+
+  :where(.field-type-radio,
+.field-type-checkbox).type-square .type-sub-square span {
+    float: left;
+    vertical-align: middle;
+    transform: translate3d(0, 0, 0)
+  }
+
+  :where(.field-type-radio,
+.field-type-checkbox).type-square .type-sub-square span:first-child {
+    position: relative;
+    width: calc((20px + var(--radio-size, 20px)) * .9);
+    height: calc((20px + var(--radio-size, 20px)) * .9);
+    border-radius: 4px;
+    transform: scale(1);
+    border: 1px solid var(--radio-default-color, #cccfdb) !important;
+    transition: all .2s ease;
+    box-shadow: 0 1px 1px rgba(0, 16, 75, .05) !important
+  }
+
+  :where(.field-type-radio,
+.field-type-checkbox).type-square .type-sub-square span:first-child svg {
+    position: absolute;
+    width: calc((20px + var(--radio-size, 0px)) * .6);
+    height: calc((20px + var(--radio-size, 0px)) * .5);
+    top: 50%;
+    left: 50%;
+    fill: none;
+    stroke: #fff;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-dasharray: 16px;
+    stroke-dashoffset: 16px;
+    transition: all .3s ease;
+    transition-delay: .1s;
+    transform: translate3d(0, 0, 0) translate(-50%, -50%)
+  }
+
+  :where(.field-type-radio,
+.field-type-checkbox).type-square .type-sub-square span:last-child {
+    padding-left: 8px;
+    line-height: 18px
+  }
+
+  :where(.field-type-radio,
+.field-type-checkbox).type-square .type-sub-square:hover span:first-child {
+    border-color: var(--radio-color, #07f) !important;
+    line-height: 5
+  }
+
+  :where(.field-type-radio,
+.field-type-checkbox).type-square .type-input {
+    position: absolute;
+    visibility: hidden;
+    display: none !important
+  }
+
+  :where(.field-type-radio,
+.field-type-checkbox).type-square .type-input:checked + .type-sub-square span:first-child {
+    background: var(--radio-color, #07f) !important;
+    border-color: var(--radio-color, #07f) !important;
+    animation: wave-4 .4s ease
+  }
+
+  :where(.field-type-radio,
+.field-type-checkbox).type-square .type-input:checked + .type-sub-square span:first-child svg {
+    stroke-dashoffset: 0
+  }
+
+  :where(.field-type-radio,
+.field-type-checkbox).type-square .inline-svg {
+    position: absolute;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+    user-select: none
+  }
+
+  :where(.field-type-radio,
+.field-type-checkbox).type-square .field-subgroup label {
+    display: inline-flex !important;
+    flex-direction: row-reverse !important;
+    align-items: center !important;
+    gap: .5rem !important;
+    padding-left: 0 !important;
+    cursor: pointer;
+    justify-content: start
+  }
+
+  @media screen and (max-width: 640px) {
+    :where(.field-type-radio,
+  .field-type-checkbox).type-square .type-sub-square {
+      width: 100%;
+      display: inline-block
+    }
+  }
+  @-moz-keyframes wave-4 {
+    50% {
+      transform: scale(.9)
+    }
+  }
+  @-webkit-keyframes wave-4 {
+    50% {
+      transform: scale(.9)
+    }
+  }
+  @-o-keyframes wave-4 {
+    50% {
+      transform: scale(.9)
+    }
+  }
+  @keyframes wave-4 {
+    50% {
+      transform: scale(.9)
+    }
+  }
+
+  :where(.field-type-radio,
+.field-type-checkbox).type-round * {
+    box-sizing: border-box
+  }
+
+  :where(.field-type-radio,
+.field-type-checkbox).type-round .type-sub-round {
+    -webkit-user-select: none;
+    user-select: none;
+    cursor: pointer;
+    padding: 6px 8px;
+    border-radius: 6px;
+    overflow: hidden;
+    transition: all .2s ease;
+    display: inline-block
+  }
+
+  :where(.field-type-radio,
+.field-type-checkbox).type-round .type-sub-round:not(:last-child) {
+    margin-right: 6px
+  }
+
+  :where(.field-type-radio,
+.field-type-checkbox).type-round .type-sub-round span {
+    float: left;
+    vertical-align: middle;
+    transform: translate3d(0, 0, 0)
+  }
+
+  :where(.field-type-radio,
+.field-type-checkbox).type-round .type-sub-round span:first-child {
+    position: relative;
+    width: calc((20px + var(--radio-size, 20px)) * .9);
+    height: calc((20px + var(--radio-size, 20px)) * .9);
+    border-radius: calc((20px + var(--radio-size, 20px)) * .5);
+    transform: scale(1);
+    border: 1px solid var(--radio-default-color, #cccfdb) !important;
+    transition: all .2s ease;
+    box-shadow: 0 1px 1px rgba(0, 16, 75, .05) !important
+  }
+
+  :where(.field-type-radio,
+.field-type-checkbox).type-round .type-sub-round span:first-child svg {
+    position: absolute;
+    width: calc((20px + var(--radio-size, 0px)) * .6);
+    height: calc((20px + var(--radio-size, 0px)) * .5);
+    top: 50%;
+    left: 50%;
+    fill: none;
+    stroke: #fff;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-dasharray: 16px;
+    stroke-dashoffset: 16px;
+    transition: all .3s ease;
+    transition-delay: .1s;
+    transform: translate3d(0, 0, 0) translate(-50%, -50%)
+  }
+
+  :where(.field-type-radio,
+.field-type-checkbox).type-round .type-sub-round span:last-child {
+    padding-left: 8px;
+    line-height: 18px
+  }
+
+  :where(.field-type-radio,
+.field-type-checkbox).type-round .type-sub-round:hover span:first-child {
+    border-color: var(--radio-color, #07f) !important
+  }
+
+  :where(.field-type-radio,
+.field-type-checkbox).type-round .type-input {
+    position: absolute;
+    visibility: hidden
+  }
+
+  :where(.field-type-radio,
+.field-type-checkbox).type-round .type-input:checked + .type-sub-round span:first-child {
+    background: var(--radio-color, #07f) !important;
+    border-color: var(--radio-color, #07f) !important;
+    animation: wave-4 .4s ease
+  }
+
+  :where(.field-type-radio,
+.field-type-checkbox).type-round .type-input:checked + .type-sub-round span:first-child svg {
+    stroke-dashoffset: 0
+  }
+
+  :where(.field-type-radio,
+.field-type-checkbox).type-round .inline-svg {
+    position: absolute;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+    user-select: none
+  }
+
+  :where(.field-type-radio,
+.field-type-checkbox).type-round .field-subgroup label {
+    vertical-align: top !important;
+    display: inline-flex !important;
+    flex-direction: row-reverse !important;
+    align-items: center !important;
+    gap: .5rem !important;
+    padding-left: 0 !important;
+    justify-content: start
+  }
+
+  @media screen and (max-width: 640px) {
+    :where(.field-type-radio,
+  .field-type-checkbox).type-round .type-sub-round {
+      width: 100%;
+      display: inline-block
+    }
+  }
+  @-moz-keyframes wave-4 {
+    50% {
+      transform: scale(.9)
+    }
+  }
+  @-webkit-keyframes wave-4 {
+    50% {
+      transform: scale(.9)
+    }
+  }
+  @-o-keyframes wave-4 {
+    50% {
+      transform: scale(.9)
+    }
+  }
+  @keyframes wave-4 {
+    50% {
+      transform: scale(.9)
+    }
+  }
+
+  :where(.field-type-radio,
+.field-type-checkbox).type-dotSquare * {
+    box-sizing: border-box
+  }
+
+  :where(.field-type-radio,
+.field-type-checkbox).type-dotSquare .type-dotsq {
+    -webkit-user-select: none;
+    user-select: none;
+    cursor: pointer;
+    padding: 6px 8px;
+    border-radius: 0;
+    overflow: hidden;
+    transition: all .2s ease;
+    display: inline-block
+  }
+
+  :where(.field-type-radio,
+.field-type-checkbox).type-dotSquare .type-dotsq:not(:last-child) {
+    margin-right: 6px
+  }
+
+  :where(.field-type-radio,
+.field-type-checkbox).type-dotSquare .type-dotsq span {
+    float: left;
+    vertical-align: middle;
+    transform: translate3d(0, 0, 0)
+  }
+
+  :where(.field-type-radio,
+.field-type-checkbox).type-dotSquare .type-dotsq span:first-child {
+    position: relative;
+    width: calc((20px + var(--radio-size, 20px)) * .9);
+    height: calc((20px + var(--radio-size, 20px)) * .9);
+    border-radius: 0;
+    transform: scale(1);
+    border: 1px solid var(--radio-default-color, #cccfdb) !important;
+    transition: all .2s ease;
+    box-shadow: 0 1px 1px rgba(0, 16, 75, .05) !important
+  }
+
+  :where(.field-type-radio,
+.field-type-checkbox).type-dotSquare .type-dotsq span:last-child {
+    padding-left: 8px;
+    line-height: 18px
+  }
+
+  :where(.field-type-radio,
+.field-type-checkbox).type-dotSquare .type-dotsq:hover span:first-child {
+    border-color: var(--radio-color, #07f) !important;
+    line-height: 5
+  }
+
+  :where(.field-type-radio,
+.field-type-checkbox).type-dotSquare .type-input {
+    position: absolute;
+    visibility: hidden;
+    display: none !important
+  }
+
+  :where(.field-type-radio,
+.field-type-checkbox).type-dotSquare .type-input:checked + .type-dotsq span:first-child {
+    border: 1.6px solid var(--radio-color) !important;
+    background: var(--radio-color, #07f) !important;
+    box-shadow: 0 0 0 2.8px inset #fff !important;
+    animation: wave-4 .4s ease
+  }
+
+  :where(.field-type-radio,
+.field-type-checkbox).type-dotSquare .type-input:checked + .type-dotsq span:first-child svg {
+    stroke-dashoffset: 0
+  }
+
+  :where(.field-type-radio,
+.field-type-checkbox).type-dotSquare .inline-svg {
+    position: absolute;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+    user-select: none
+  }
+
+  :where(.field-type-radio,
+.field-type-checkbox).type-dotSquare .field-subgroup label {
+    display: inline-flex !important;
+    flex-direction: row-reverse !important;
+    align-items: center !important;
+    gap: .5rem !important;
+    padding-left: 0 !important;
+    cursor: pointer
+  }
+
+  :where(.field-type-radio,
+.field-type-checkbox).type-dotCircle * {
+    box-sizing: border-box
+  }
+
+  :where(.field-type-radio,
+.field-type-checkbox).type-dotCircle .type-dotci {
+    -webkit-user-select: none;
+    user-select: none;
+    cursor: pointer;
+    padding: 6px 8px;
+    border-radius: 0;
+    overflow: hidden;
+    transition: all .2s ease;
+    display: inline-block
+  }
+
+  :where(.field-type-radio,
+.field-type-checkbox).type-dotCircle .type-dotci:not(:last-child) {
+    margin-right: 6px
+  }
+
+  :where(.field-type-radio,
+.field-type-checkbox).type-dotCircle .type-dotci span {
+    float: left;
+    vertical-align: middle;
+    transform: translate3d(0, 0, 0)
+  }
+
+  :where(.field-type-radio,
+.field-type-checkbox).type-dotCircle .type-dotci span:first-child {
+    position: relative;
+    width: calc((20px + var(--radio-size, 20px)) * .9);
+    height: calc((20px + var(--radio-size, 20px)) * .9);
+    border-radius: 50%;
+    transform: scale(1);
+    border: 1px solid var(--radio-default-color, #cccfdb) !important;
+    transition: all .2s ease;
+    box-shadow: 0 1px 1px rgba(0, 16, 75, .05) !important
+  }
+
+  :where(.field-type-radio,
+.field-type-checkbox).type-dotCircle .type-dotci span:last-child {
+    padding-left: 8px;
+    line-height: 18px
+  }
+
+  :where(.field-type-radio,
+.field-type-checkbox).type-dotCircle .type-dotci:hover span:first-child {
+    border-color: var(--radio-color, #07f) !important;
+    line-height: 5
+  }
+
+  :where(.field-type-radio,
+.field-type-checkbox).type-dotCircle .type-input {
+    position: absolute !important;
+    visibility: hidden !important;
+    display: none !important
+  }
+
+  :where(.field-type-radio,
+.field-type-checkbox).type-dotCircle .type-input:checked + .type-dotci span:first-child {
+    border: 1.6px solid var(--radio-color) !important;
+    background: var(--radio-color, #07f) !important;
+    box-shadow: 0 0 0 2.9px inset #fff !important;
+    animation: wave-4 .4s ease
+  }
+
+  :where(.field-type-radio,
+.field-type-checkbox).type-dotCircle .type-input:checked + .type-dotci span:first-child svg {
+    stroke-dashoffset: 0
+  }
+
+  :where(.field-type-radio,
+.field-type-checkbox).type-dotCircle .inline-svg {
+    position: absolute;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+    user-select: none
+  }
+
+  :where(.field-type-radio,
+.field-type-checkbox).type-dotCircle .field-subgroup label {
+    display: inline-flex !important;
+    flex-direction: row-reverse !important;
+    align-items: center !important;
+    gap: .5rem !important;
+    padding-left: 0 !important;
+    cursor: pointer
+  }
+
+  :where(.field-type-radio,
+.field-type-checkbox).type-switcher * {
+    box-sizing: border-box
+  }
+
+  :where(.field-type-radio,
+.field-type-checkbox).type-switcher .type-sub-swtch {
+    -webkit-user-select: none;
+    user-select: none;
+    cursor: pointer;
+    padding: 6px 8px;
+    border-radius: 6px;
+    overflow: hidden;
+    transition: all .2s ease;
+    display: inline-block
+  }
+
+  :where(.field-type-radio,
+.field-type-checkbox).type-switcher .type-sub-swtch:not(:last-child) {
+    margin-right: 6px
+  }
+
+  :where(.field-type-radio,
+.field-type-checkbox).type-switcher .type-sub-swtch span {
+    display: inline-block;
+    vertical-align: middle;
+    transform: translate3d(0, 0, 0)
+  }
+
+  :where(.field-type-radio,
+.field-type-checkbox).type-switcher .type-sub-swtch span:first-child {
+    --height: 20px;
+    appearance: none;
+    background-color: var(--radio-default-color, #dfe1e4) !important;
+    border-radius: 72px;
+    border-style: none;
+    flex-shrink: 0;
+    height: calc(20px + var(--radio-size, 20px));
+    width: calc((20px + var(--radio-size, 20px)) * 1.5);
+    margin: 0;
+    position: relative;
+    cursor: default;
+    transition: background-color .2s ease, border-color .2s ease
+  }
+
+  :where(.field-type-radio,
+.field-type-checkbox).type-switcher .type-sub-swtch span::after {
+    content: "";
+    background-color: #fff !important;
+    border-radius: 50%;
+    height: calc((20px + var(--radio-size, 20px)) * .7);
+    width: calc((20px + var(--radio-size, 20px)) * .7);
+    position: absolute;
+    top: calc((20px + var(--radio-size, 20px)) * .15);
+    left: calc((20px + var(--radio-size, 20px)) * .15);
+    transition: left .2s ease
+  }
+
+  :where(.field-type-radio,
+.field-type-checkbox).type-switcher .type-sub-swtch span:last-child {
+    cursor: pointer
+  }
+
+  :where(.field-type-radio,
+.field-type-checkbox).type-switcher .type-sub-swtch:hover span:first-child {
+    border-color: var(--radio-color, #07f) !important;
+    line-height: 5
+  }
+
+  :where(.field-type-radio,
+.field-type-checkbox).type-switcher .type-input {
+    position: absolute;
+    visibility: hidden;
+    display: none !important
+  }
+
+  :where(.field-type-radio,
+.field-type-checkbox).type-switcher .type-input:checked + .type-sub-swtch span:first-child {
+    background: var(--radio-color, #07f) !important;
+    border-color: var(--radio-color, #07f) !important
+  }
+
+  :where(.field-type-radio,
+.field-type-checkbox).type-switcher .type-input:checked + .type-sub-swtch span:first-child::after {
+    left: calc((20px + var(--radio-size, 20px)) * .65)
+  }
+
+  :where(.field-type-radio,
+.field-type-checkbox).type-switcher .inline-svg {
+    position: absolute;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+    user-select: none
+  }
+
+  :where(.field-type-radio,
+.field-type-checkbox).type-switcher .field-subgroup label {
+    display: inline-flex !important;
+    flex-direction: row-reverse !important;
+    align-items: center !important;
+    gap: .5rem !important;
+    padding-left: 0 !important;
+    cursor: pointer
+  }
+
+  :where(.field-type-radio,
+.field-type-checkbox).type-cover * {
+    box-sizing: border-box
+  }
+
+  :where(.field-type-radio,
+.field-type-checkbox).type-cover .type-sub-cover {
+    -webkit-user-select: none;
+    user-select: none;
+    cursor: pointer;
+    padding: 0 8px;
+    border-radius: 6px;
+    overflow: hidden;
+    transition: all .2s ease;
+    display: inline-block;
+    border: 2px solid var(--radio-default-color, #07f) !important
+  }
+
+  :where(.field-type-radio,
+.field-type-checkbox).type-cover .type-sub-cover:not(:last-child) {
+    margin-right: 6px
+  }
+
+  :where(.field-type-radio,
+.field-type-checkbox).type-cover .type-sub-cover:hover {
+    border: 2px solid var(--radio-color, #07f) !important
+  }
+
+  :where(.field-type-radio,
+.field-type-checkbox).type-cover .type-sub-cover span {
+    float: left;
+    vertical-align: middle;
+    transform: translate3d(0, 0, 0)
+  }
+
+  :where(.field-type-radio,
+.field-type-checkbox).type-cover .type-sub-cover span:last-child {
+    padding-left: 8px;
+    line-height: 18px;
+    display: none
+  }
+
+  :where(.field-type-radio,
+.field-type-checkbox).type-cover .type-input {
+    position: absolute;
+    visibility: hidden;
+    display: none !important
+  }
+
+  :where(.field-type-radio,
+.field-type-checkbox).type-cover .field-subgroup label {
+    position: relative;
+    line-height: 2;
+    cursor: pointer;
+    display: inline-flex
+  }
+
+  :where(.field-type-radio,
+.field-type-checkbox).type-cover :where(input[type=radio],
+input[type=checkbox]):checked + label {
+    border: 2px solid var(--radio-color, #07f) !important;
+    transition: .2s ease
+  }
+
+  :where(.field-type-radio,
+.field-type-checkbox).type-cover .field-subgroup label {
+    display: inline-flex !important;
+    flex-direction: row-reverse !important;
+    align-items: center !important;
+    gap: .5rem !important;
+    padding-right: calc((15px + var(--radio-size, 0px)) * .8) !important;
+    cursor: pointer;
+    margin-bottom: 5px !important
+  }
+
+  :where(.field-type-radio,
+.field-type-checkbox).type-checklist * {
+    box-sizing: border-box;
+    padding-bottom: .9px
+  }
+
+  :where(.field-type-radio,
+.field-type-checkbox).type-checklist input[type=checkbox] {
+    border-width: 0 !important;
+    outline: 0 !important;
+    background: 0 0 !important;
+    display: none !important;
+    -webkit-appearance: none;
+    appearance: none;
+    cursor: pointer
+  }
+
+  :where(.field-type-radio,
+.field-type-checkbox).type-checklist .type-input {
+    display: none !important
+  }
+
+  :where(.field-type-radio,
+.field-type-checkbox).type-checklist .field-option span {
+    speak: none;
+    font-style: normal;
+    font-weight: 400;
+    font-variant: normal;
+    text-transform: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    cursor: pointer !important;
+    display: flex
+  }
+
+  :where(.field-type-radio,
+.field-type-checkbox).type-checklist .field-option span::before {
+    content: "\e600";
+    font-size: calc((20px + var(--radio-size, 0px)) * .8) !important;
+    color: var(--radio-default-color, rgba(192, 211, 233, .719)) !important
+  }
+
+  :where(.field-type-radio,
+.field-type-checkbox).type-checklist .type-input:checked + label span::before {
+    content: "\e601";
+    font-size: calc((20px + var(--radio-size, 0px)) * .8) !important;
+    color: var(--radio-color, #2a7dea) !important
+  }
+
+  :where(.field-type-radio,
+.field-type-checkbox).type-checklist .type-sub-checklist {
+    display: inline-flex !important;
+    flex-direction: row-reverse !important;
+    gap: .5rem;
+    align-items: center;
+    cursor: pointer
+  }
+
+  :where(.field-type-radio,
+.field-type-checkbox).type-checklist.type-sub-checklist label {
+    cursor: pointer !important
+  }
+
+  :where(.field-type-radio,
+.field-type-checkbox).type-checklist.type-sub-checklist:not(:last-child) {
+    margin-right: 6px
+  }
+
+  :where(.field-type-radio,
+.field-type-checkbox).type-checklist.type-sub-checklist span:last-child {
+    padding-left: 8px;
+    line-height: 18px
+  }
+
+  :where(.field-type-radio,
+.field-type-checkbox).type-checklist.type-sub-checklist:hover span:first-child {
+    border-color: var(--radio-color, #07f) !important;
+    line-height: 5
+  }
+
+  :where(.field-type-radio,
+.field-type-checkbox).type-checklist.type-input:checked + .type-sub-checklist span:first-child svg {
+    stroke-dashoffset: 0
+  }
+
+  :where(.field-type-radio,
+.field-type-checkbox).type-checklist.inline-svg {
+    position: absolute;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+    user-select: none
+  }
+
+  :where(.field-type-radio,
+.field-type-checkbox).type-checklist span.field-option {
+    gap: .5rem !important;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    place-content: flex-start;
+    align-items: center
+  }
+
+  :where(.field-type-radio,
+.field-type-checkbox).type-checklist .field-subgroup:not(.subgroup-inline) span.field-option {
+    flex-basis: 100%
+  }
