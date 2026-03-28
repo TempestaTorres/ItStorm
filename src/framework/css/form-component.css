@@ -48,7 +48,7 @@
 }
 
 @media screen and (hover: hover) {
-  .field__input.invalid:hover
+  .field__input.invalid:hover,
   .field__input.ng-invalid.ng-touched:hover,
   .select__select.invalid:hover,
   .customer .field input.invalid:hover,
