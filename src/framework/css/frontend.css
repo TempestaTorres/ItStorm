@@ -22,6 +22,10 @@
     display: none!important;
   }
 }
+.focus-none {
+  box-shadow: none !important;
+  outline: 0 !important;
+}
 /* table*/
 table:not([class]) {
   table-layout: fixed;

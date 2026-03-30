@@ -1,6 +1,11 @@
-import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {Component, EventEmitter, Input, OnDestroy, OnInit, Output} from '@angular/core';
 import {FormControl, FormGroup, ReactiveFormsModule, Validators} from '@angular/forms';
 import {CustomValidators} from '../../validators/validators';
+import {RequestType} from '../../requests/request-type';
+import {Request} from '../../requests/request';
+// @ts-ignore
+import {HttpErrorResponse} from '@angular/common/module.d';
+import {Subscription} from 'rxjs';
 
 @Component({
   selector: 'app-modal-service',
@@ -10,7 +15,7 @@ import {CustomValidators} from '../../validators/validators';
   templateUrl: './modal-service.html',
   styleUrl: './modal-service.css',
 })
-export class ModalService implements OnInit {
+export class ModalService implements OnInit, OnDestroy {
 
   @Input() dialogOpened:boolean = false;
   @Input() modalType:string = 'consultation';
@@ -23,8 +28,14 @@ export class ModalService implements OnInit {
   public formError: boolean = false;
   public errorMsg: string = '';
   public buttonLabel = 'Заказать консультацию';
+  public iconCaretActive: boolean = false;
 
   public modalForm!: FormGroup;
+
+  private subscription: Subscription | undefined;
+
+  constructor(private requestService: Request) {
+  }
 
   get name() {return this.modalForm.get('name');};
   get serviceName() {return this.modalForm.get('serviceName');};
@@ -40,12 +51,18 @@ export class ModalService implements OnInit {
     }
     else if (this.modalType === 'service') {
       this.modalForm = new FormGroup({
-        serviceName: new FormControl('', Validators.required),
+        serviceName: new FormControl('Фриланс', Validators.required),
         name: new FormControl('', Validators.required),
         phone: new FormControl('', [Validators.required, CustomValidators.phoneValidator]),
       });
 
       this.buttonLabel = 'Оставить заявку';
+    }
+  }
+
+  ngOnDestroy() {
+    if (this.subscription) {
+      this.subscription.unsubscribe();
     }
   }
 
@@ -61,6 +78,41 @@ export class ModalService implements OnInit {
           this.processing = false;
           this.confirmed = true;
           this.formError = false;
+
+        }, 500);
+      }
+      else if (this.modalType === 'service') {
+        let req: RequestType = {
+          name: this.modalForm.value.name,
+          phone: this.modalForm.value.phone,
+          service: this.modalForm.value.serviceName,
+          type: 'order'
+        }
+
+        setTimeout(() => {
+          this.processing = false;
+
+          this.subscription = this.requestService.sendRequest(req).subscribe({
+            next: result => {
+
+              this.processing = false;
+
+              if (!result.error) {
+
+                this.confirmed = true;
+                this.formError = false;
+              }
+              else {
+                this.formError = true;
+                this.errorMsg = result.message;
+              }
+            },
+            error: (err: HttpErrorResponse) => {
+              this.processing = false;
+              this.formError = true;
+              this.errorMsg = err.message;
+            }
+          });
 
         }, 500);
       }
@@ -83,5 +135,20 @@ export class ModalService implements OnInit {
       this.confirmed = false;
       this.close.emit(false);
     }, 350);
+  }
+
+  public serviceClicked(): void {
+    this.iconCaretActive = !this.iconCaretActive;
+
+  }
+  public serviceBlur(): void {
+    this.iconCaretActive = false;
+  }
+
+  public serviceChanged(): void {
+
+    setTimeout(() => {
+      this.iconCaretActive = false;
+    }, 200);
   }
 }

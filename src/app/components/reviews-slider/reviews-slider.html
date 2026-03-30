@@ -1,0 +1,48 @@
+<div class="wtwp-slider-wrp"
+    data-conf='{"slides_column":3,"slides_scroll":1,"dots":"false","loop":"true","arrows":"true","autoplay":"true","autoplay_interval":3000,"speed":300,"center_mode":"false","effect":"false","rtl":"false","hover_pause":"true","focus_pause":"false"}'>
+    <!--  Slick slider -->
+    <div
+      id="testimonial-slider"
+      class="wtwp-testimonials-slider slick-slider full-width wtwp-testimonials-slidelist wtwp-design-8 wtwp-slider-clmn-3">
+
+      @for (review of reviews; track $index) {
+        <!-- Slide -->
+        <div class="wtwp-testimonial-box custom-style wtwp-quote slick-slide">
+          <div class="wtwp-testimonial-inner">
+            <!-- Avatar -->
+            <div class="wtwp-medium-4 wtwp-columns">
+              <div class="wtwp-testimonial-avatar">
+                <!-- Image -->
+                <div class="wtwp-avtar-image">
+                  <img [src]="review.image" class="wtwp-circle wp-post-image" alt="" decoding="async" loading="lazy" sizes="auto, (max-width: 60px) 100vw, 60px">
+                </div>
+              </div>
+            </div>
+            <!-- Author -->
+            <div class="wtwp-medium-8 wtwp-columns">
+              <div class="wtwp-testimonial-author"><strong>{{ review.name }}</strong></div>
+              <div class="wtwp-testimonial-cdec">{{ review.dec }}</div>
+              <!-- Ratings -->
+              <div class="wtwp-testimonial-rating">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+              </div>
+            </div>
+            <!-- Content -->
+            <div class="wtwp-testimonial-content">
+              <!-- Heading -->
+              <div class="wtwp-testimonial-title">Свежий отзыв</div>
+              <!-- Text -->
+              <div class="wtwp-testimonials-text">
+                <em>{{ review.text }}</em>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      }
+    </div>
+</div>

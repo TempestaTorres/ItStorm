@@ -1,0 +1,17 @@
+.section-main-content {
+  position: relative;
+
+  .section-blog {
+    padding-top: calc(80px * 0.75);
+    padding-bottom: calc(120px * 0.75);
+    --wrap: wrap;
+  }
+
+
+  @media (min-width: 990px) {
+    .section-blog {
+      padding-top: 80px;
+      padding-bottom: 120px;
+    }
+  }
+}

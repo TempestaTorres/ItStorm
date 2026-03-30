@@ -265,7 +265,26 @@
 .card-information__wrapper .caption {
   letter-spacing: 0.07rem;
 }
-
+.card-article-info__description {
+  min-height: 114px;
+  padding-bottom: 9px;
+}
+.card-article-info__description.large {
+  min-height: 140px;
+  padding-bottom: 0;
+}
+.card-information__footer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+@media screen and (min-width: 750px) {
+  .card-information__footer {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+}
 .card-wrapper {
   color: inherit;
   display: block;
@@ -306,7 +325,11 @@
   z-index: 1;
   max-width: 50%;
 }
-
+.card__badge.align-right {
+  top: 10px;
+  left: initial;
+  right: 10px;
+}
 @media screen and (min-width: 750px) {
   .card__badge {
     left: -10px;

@@ -1,5 +1,6 @@
 @import "framework/css/reset.css";
 @import "framework/css/swiper.css";
+@import "framework/css/apsisac-pro.css";
 @import "framework/css/animations.css";
 @import "framework/css/app-kit.css";
 @import "framework/css/grid-slider.css";
@@ -12,7 +13,6 @@
 @import "framework/css/banner-reveal.css";
 @import "framework/css/collections.css";
 @import "framework/css/swiper-widget.css";
-@import "framework/css/diplom.css";
 @import "framework/css/testimonial-slider.css";
 @import "framework/css/filter.css";
 @import "framework/css/facets.css";
@@ -25,3 +25,4 @@
 @import "framework/css/price.css";
 @import "framework/css/radio-checkbox-widget.css";
 @import "framework/css/checout-widget.css";
+@import "framework/css/diplom.css";

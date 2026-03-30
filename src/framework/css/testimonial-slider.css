@@ -217,6 +217,9 @@ img.wtwp-square {
 .wtwp-testimonials-slidelist.slick-slider {
   padding:0 15px
 }
+.wtwp-testimonials-slidelist.slick-slider.full-width {
+  padding:0
+}
 .wtwp-tmnl-slide-widget.slick-slider {
   padding:0 20px
 }
@@ -805,6 +808,11 @@ img.wtwp-square {
 }
 .wtwp-design-8 .wtwp-testimonial-box:nth-child(4n+5) .wtwp-testimonial-inner {
   background-color:#9365b8
+}
+.wtwp-design-8 .wtwp-testimonial-box.custom-style .wtwp-testimonial-inner {
+  --wtwp-bg-color:#4984ef;
+
+  background-color: var(--wtwp-bg-color);
 }
 .wtwp-design-9 .wtwp-testimonial-inner {
   background:#f1f1f1;

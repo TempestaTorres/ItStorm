@@ -192,13 +192,13 @@
   --product-card-text-alignment: center;
   --product-card-border-width: 0.0rem;
   --product-card-border-opacity: 0.0;
-  --product-card-shadow-opacity: 0.0;
+  --product-card-shadow-opacity: 0.9;
   --product-card-shadow-visible: 0;
   --product-card-shadow-horizontal-offset: 4px;
   --product-card-shadow-vertical-offset: 4px;
   --product-card-shadow-blur-radius: 10px;
   --product-card-color-scheme: var(--color-placeholder);
-  --product-card-radius: 10px;
+  --product-card-radius: 5px;
   --product-card-color-shadow: 168, 232, 226;
 
   --collection-card-image-padding: 0.0rem;
@@ -320,11 +320,19 @@
     --color-header-background: 255, 255, 255;
     --color-header-foreground: 51, 51, 51;
     --color-header-border: 136, 159, 131;
+    --button-radius: 5px;
+    --color-badge-border: #fff;
+    --color-badge-background: #fff;
+    --color-badge-foreground: var(--global-color-primary);
 
     .button {
       font-weight: 500;
       text-transform: none;
       letter-spacing: normal;
+    }
+    .button-medium {
+      min-width: 163px;
+      padding:15px 0;
     }
     .button--small {
       padding: 6px 16px;
@@ -350,7 +358,8 @@
     }
     .typeset {
       font-size: 14px!important;
-      line-height: initial!important;
+      line-height: 130%!important;
+      color: var(--global-color-text);
     }
   }
 
@@ -483,6 +492,7 @@
   font-size: var(--global-typography-103-font-size);
   font-weight: var(--global-typography-103-font-weight);
   line-height: var(--global-typography-103-line-height);
+  margin: 0;
 }
 
 .app-kit h4 {
@@ -507,7 +517,7 @@
   width: auto;
   max-width: 100%;
   border: none;
-  color: white !important;
+  color: white;
   font-family: var(--global-typography-text-primary-font-family), sans-serif;
   font-size: var(--global-typography-text-primary-font-size);
   font-weight: var(--global-typography-text-primary-font-weight);

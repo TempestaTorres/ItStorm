@@ -1,0 +1,11 @@
+.wtwp-design-8 .wtwp-testimonial-box.custom-style .wtwp-testimonial-inner {
+  --wtwp-bg-color:var(--global-color-primary);
+}
+.wtwp-design-8 .wtwp-testimonial-inner {
+  border-radius: 5px;
+}
+@media (min-width: 950px) {
+  .wtwp-testimonial-content {
+    height: 220px;
+  }
+}
