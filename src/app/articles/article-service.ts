@@ -1,8 +1,9 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
-import {Observable} from 'rxjs';
+import {debounceTime, Observable} from 'rxjs';
 import {Environment} from '../environment/environment';
-import {ArticleType} from './article-types';
+import {ArticlesType, ArticleType} from './article-types';
+import {QueryParamTypes} from '../components/featured-filter/queryparam-type';
 
 @Injectable({
   providedIn: 'root',
@@ -13,5 +14,15 @@ export class ArticleService {
 
   public getPopularArticles(): Observable<ArticleType[]> {
     return this.http.get<ArticleType[]>(Environment.api + 'articles/top');
+  }
+
+  public getArticles(page: number): Observable<ArticlesType> {
+    return this.http.get<ArticlesType>(Environment.api + 'articles', {params: {page: page}});
+  }
+
+  public getArticlesSorted(params: QueryParamTypes): Observable<ArticlesType> {
+    return this.http.get<ArticlesType>(Environment.api + 'articles', {params: params}).pipe(
+      debounceTime(500),
+    );
   }
 }

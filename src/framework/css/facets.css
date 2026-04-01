@@ -98,6 +98,7 @@
 
   .facet-filters {
     position: relative;
+    width:100%;
     top: 0;
     z-index: 15;
     display: flex;
@@ -119,6 +120,8 @@
 
   .facet-filters-sticky {
     position: sticky;
+    top: 0;
+    left: 0;
   }
 
   .facet-filters > .page-width {

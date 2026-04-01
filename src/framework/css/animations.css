@@ -409,6 +409,9 @@
   }
 }.rotateIn {
    animation-name: rotateIn;
+   animation-timing-function: ease-out;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
  }
 @keyframes rotateInDownLeft {
   from {

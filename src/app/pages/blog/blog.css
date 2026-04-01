@@ -1,17 +1,27 @@
-.section-main-content {
+.main-content-section {
+  --color-base-background: 185, 213, 253;
   position: relative;
 
   .section-blog {
     padding-top: calc(80px * 0.75);
     padding-bottom: calc(120px * 0.75);
-    --wrap: wrap;
   }
-
+  .section-blog > .app-container {
+    --wrap:wrap;
+  }
 
   @media (min-width: 990px) {
     .section-blog {
       padding-top: 80px;
       padding-bottom: 120px;
     }
+  }
+
+  .collection .loading-overlay {
+    top: 50%;
+  }
+  .collection .loading-overlay .loading-overlay-spinner {
+    width: 160px;
+    height: 160px;
   }
 }

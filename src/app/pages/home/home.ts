@@ -8,6 +8,7 @@ import {Subscription} from 'rxjs';
 // @ts-ignore
 import {isArray} from '@angular/compiler-cli/src/ngtsc/annotations/common';
 import {ReviewsSlider} from '../../components/reviews-slider/reviews-slider';
+import {ScrollingService} from '../../services/scrolling-service';
 
 @Component({
   selector: 'app-home',
@@ -29,7 +30,8 @@ export class Home implements OnInit, AfterViewInit, OnDestroy {
   public articleImgUrl: string = ArticleImage.path;
 
 
-  constructor(private slickService: SlickService, private articleService: ArticleService) {
+  constructor(private slickService: SlickService, private articleService: ArticleService,
+              private scrollingService: ScrollingService) {
   }
 
   ngOnInit() {
@@ -42,7 +44,8 @@ export class Home implements OnInit, AfterViewInit, OnDestroy {
       error: err => {
         console.log(err);
       }
-    })
+    });
+    this.scrollingService.toTop();
   }
 
   ngAfterViewInit(): void {

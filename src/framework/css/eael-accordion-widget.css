@@ -259,11 +259,11 @@
  .eael-adv-accordion-style-two .eael-adv-accordion .eael-accordion-list .eael-accordion-header:hover .fa-accordion-icon {
   color: #fff;
 }
- .eael-adv-accordion-style-two .eael-adv-accordion .eael-accordion-list .eael-accordion-header:hover .fa-accordion-icon svg {
+ .eael-adv-accordion-style-two .eael-adv-accordion .eael-accordion-list .eael-accordion-header:hover .fa-accordion-icon svg path {
   color: #fff;
   fill: #fff;
 }
- .eael-adv-accordion-style-two .eael-adv-accordion .eael-accordion-list .eael-accordion-header:hover svg.fa-accordion-icon {
+ .eael-adv-accordion-style-two .eael-adv-accordion .eael-accordion-list .eael-accordion-header:hover svg.fa-accordion-icon path {
   fill: #fff;
 }
  .eael-adv-accordion-style-two .eael-accordion_media-list:hover .eael-accordion_media-icon i {
@@ -355,6 +355,12 @@
 .eael-adv-accordion-style-three .eael-accordion_media-wrapper {
   padding: 1px 10px 10px 10px;
 }
+.eael-adv-accordion-style-three .eael-adv-accordion.default {
+  padding: 0;
+}
+.eael-adv-accordion-style-three .eael-accordion_media-wrapper.default {
+  padding: 0;
+}
 .eael-adv-accordion-style-three .eael-adv-accordion .eael-accordion-list .eael-accordion-header .eael-accordion-tab-title,
 .eael-adv-accordion-style-three .eael-accordion_media-wrapper .eael-accordion_media-list .eael-accordion_media-content .eael-accordion_media-title {
   font-family: var(--global-typography-text-font-family), sans-serif;
@@ -399,8 +405,8 @@
   color: #333;
   fill: #333;
 }
-.eael-adv-accordion-style-three .eael-adv-accordion .eael-accordion-list .eael-accordion-header svg {
-  fill: #333;
+.eael-adv-accordion-style-three .eael-adv-accordion .eael-accordion-list .eael-accordion-header svg path {
+  fill: #071739;
 }
 .eael-adv-accordion-style-three .eael-accordion_media-list .eael-accordion_media-icon {
   color: #333;
@@ -421,11 +427,14 @@
 .eael-adv-accordion-style-three .eael-adv-accordion .eael-accordion-list .eael-accordion-header:hover .fa-accordion-icon {
   color: #fff;
 }
-.eael-adv-accordion-style-three .eael-adv-accordion .eael-accordion-list .eael-accordion-header:hover .fa-accordion-icon svg {
+.eael-adv-accordion-style-three .eael-adv-accordion .eael-accordion-list .eael-accordion-header:hover .fa-accordion-icon svg path {
   color: #fff;
   fill: #fff;
 }
-.eael-adv-accordion-style-three .eael-adv-accordion .eael-accordion-list .eael-accordion-header:hover svg.fa-accordion-icon {
+.eael-adv-accordion-style-three .eael-adv-accordion .eael-accordion-list .eael-accordion-header:hover svg.fa-accordion-icon path {
+  fill: #fff;
+}
+.eael-adv-accordion-style-three .eael-adv-accordion .eael-accordion-list .eael-accordion-header:hover svg.fa-accordion-icon-svg path {
   fill: #fff;
 }
 .eael-adv-accordion-style-three .eael-accordion_media-list:hover .eael-accordion_media-icon i {
@@ -443,7 +452,7 @@
 .eael-adv-accordion-style-three .eael-adv-accordion .eael-accordion-list .eael-accordion-header.active .fa-accordion-icon {
   color: #fff;
 }
-.eael-adv-accordion-style-three .eael-adv-accordion .eael-accordion-list .eael-accordion-header.active .fa-accordion-icon svg {
+.eael-adv-accordion-style-three .eael-adv-accordion .eael-accordion-list .eael-accordion-header.active .fa-accordion-icon-svg path {
   color: #fff;
   fill: #fff;
 }

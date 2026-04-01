@@ -7,6 +7,11 @@ export type ArticleType = {
   category: string,
   url: string,
 }
+export type ArticlesType = {
+  count: number,
+  pages: number,
+  items: ArticleType[],
+}
 export const ArticleImage = {
   path: '/assets/images/articles/',
 }
