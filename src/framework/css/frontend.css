@@ -1015,6 +1015,7 @@ details[open] .modal-overlay::after {
   margin: 0;
 }
 .app-grid {
+  --margin:0;
   display: grid;
   grid-template-columns: var(--grid-template-columns);
   grid-column-gap: var(--grid-column-gap);
