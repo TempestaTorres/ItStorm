@@ -1,7 +1,7 @@
 import {Component, EventEmitter, Input, OnDestroy, OnInit, Output} from '@angular/core';
 import {FormControl, FormGroup, ReactiveFormsModule, Validators} from '@angular/forms';
 import {CustomValidators} from '../../validators/validators';
-import {RequestType} from '../../requests/request-type';
+import {RequestType, requestTypes} from '../../requests/request-type';
 import {Request} from '../../requests/request';
 // @ts-ignore
 import {HttpErrorResponse} from '@angular/common/module.d';
@@ -18,7 +18,7 @@ import {Subscription} from 'rxjs';
 export class ModalService implements OnInit, OnDestroy {
 
   @Input() dialogOpened:boolean = false;
-  @Input() modalType:string = 'consultation';
+  @Input() modalType:string = requestTypes.consultation;
   @Output() close: EventEmitter<boolean> = new EventEmitter();
 
   public processing: boolean = false;
@@ -43,13 +43,13 @@ export class ModalService implements OnInit, OnDestroy {
 
   ngOnInit() {
 
-    if (this.modalType === 'consultation') {
+    if (this.modalType === requestTypes.consultation) {
       this.modalForm = new FormGroup({
         name: new FormControl('', Validators.required),
         phone: new FormControl('', [Validators.required, CustomValidators.phoneValidator]),
       });
     }
-    else if (this.modalType === 'service') {
+    else if (this.modalType === requestTypes.order) {
       this.modalForm = new FormGroup({
         serviceName: new FormControl('Фриланс', Validators.required),
         name: new FormControl('', Validators.required),
@@ -72,27 +72,34 @@ export class ModalService implements OnInit, OnDestroy {
 
     if (this.modalForm.status === 'VALID') {
 
-      if (this.modalType === 'consultation') {
-        setTimeout(() => {
-          this.modalForm.reset();
+      let request: RequestType = {
+        name: '',
+        phone: '',
+        type: ''
+      }
+
+      if (this.modalType === requestTypes.consultation) {
+
           this.processing = false;
           this.confirmed = true;
           this.formError = false;
 
-        }, 500);
+          request.name = this.modalForm.value.name;
+          request.phone = this.modalForm.value.phone;
+          request.type = requestTypes.consultation;
       }
-      else if (this.modalType === 'service') {
-        let req: RequestType = {
-          name: this.modalForm.value.name,
-          phone: this.modalForm.value.phone,
-          service: this.modalForm.value.serviceName,
-          type: 'order'
+      else if (this.modalType === requestTypes.order) {
+
+        request.name = this.modalForm.value.name;
+        request.phone = this.modalForm.value.phone;
+        request.service = this.modalForm.value.serviceName;
+        request.type = requestTypes.order;
         }
 
         setTimeout(() => {
           this.processing = false;
 
-          this.subscription = this.requestService.sendRequest(req).subscribe({
+          this.subscription = this.requestService.sendRequest(request).subscribe({
             next: result => {
 
               this.processing = false;
@@ -115,7 +122,6 @@ export class ModalService implements OnInit, OnDestroy {
           });
 
         }, 500);
-      }
     }
     else {
       setTimeout(() => {
@@ -151,4 +157,6 @@ export class ModalService implements OnInit, OnDestroy {
       this.iconCaretActive = false;
     }, 200);
   }
+
+  protected readonly requestTypes = requestTypes;
 }

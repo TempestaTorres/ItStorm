@@ -1,0 +1,105 @@
+.main-content-section {
+
+  .section-article__heading > .heading-title {
+    margin-bottom: 40px;
+  }
+  .article-text-editor {
+    width: 100%;
+  }
+  .article-text-editor p {
+    margin:0;
+  }
+  .article-text-editor.text-editor-accent .text-caption {
+    color: var(--global-color-primary);
+    font-family: var(--global-typography-text-99-font-family), sans-serif;
+    font-size: var(--global-typography-text-99-font-size);
+    font-weight: var(--global-typography-text-99-font-weight);
+    line-height: var(--global-typography-text-99-font-line-height);
+  }
+  .section-article-content {
+    padding: calc(60px * 0.75) 0 calc(120px * 0.75) 0;
+  }
+  .article-content-wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    height: 100%;
+  }
+  .section-article-content .article-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .article-recommendations-wrap {
+    width: 100%;
+    padding: 60px 0 0 18px;
+  }
+  .article-heading-editor > .heading-title {
+    font-size: var(--global-typography-103-font-size);
+    font-weight: var(--global-typography-103-font-weight);
+    line-height: var(--global-typography-103-line-height);
+    font-family: var(--global-typography-103-font-family), sans-serif;
+    color: var(--global-color-primary);
+    margin: 0 0 20px 0;
+  }
+
+  .card-wrapper:not(:last-child) {
+    margin-bottom: 60px;
+  }
+
+  .article-share-icon-list {
+    padding: calc(60px * 0.75) 0;
+    width: 100%;
+    color: var(--global-color-primary);
+    display: flex;
+    align-items: center;
+  }
+  .article-share-icon-list .text-editor-secondary {
+    margin-right: 20px;
+  }
+  .article-share-icon-list .text-editor-secondary .text-caption {
+    color: var(--global-color-primary);
+  }
+  .shared-icon-list {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 13px;
+  }
+  .shared-icon-list__item {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .2s ease-in-out;
+  }
+  .shared-icon-list__item span {
+    display: block;
+    width: 20px;
+    height: 20px;
+  }
+  .shared-icon-list__item span svg {
+    width: 100%;
+    height: 100%;
+  }
+  .shared-icon-list__item:hover {
+    transform: scale(1.1);
+  }
+
+  @media screen and (min-width: 990px) {
+    .section-article-content {
+      padding: 60px 0 120px 0;
+    }
+    .section-article-content .article-content {
+      width: 75%;
+      padding-right: 134px;
+    }
+    .section-article-content .article-recommendations {
+      width: 25%;
+    }
+    .article-share-icon-list {
+      padding: 60px 0;
+    }
+  }
+
+}

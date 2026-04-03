@@ -105,6 +105,12 @@
       padding-bottom: var(--grid-desktop-horizontal-spacing);
     }
   }
+
+  .article-content h1, .article-content h2,
+  .article-content h3, .article-content h4,
+  .article-content h5, .article-content h6 {
+    margin-bottom: 20px;
+  }
 }
 /*list with icon */
 .list-with-icon {
@@ -151,6 +157,7 @@
   color: black;
   margin: 8px 0 6px 0;
 }
+/* Icon List */
 .heading-editor .image-with-text__heading {
   color:rgb(var(--color-foreground));
 }
@@ -170,6 +177,16 @@
   margin-bottom: 10px;
   background-color: transparent;
 
+  .text-area {
+    color: var(--color-link);
+  }
+  .text-area.has-placeholder::placeholder {
+    opacity: .5;
+  }
+  .text-area.field-input {
+    height: auto;
+  }
+
   .select {
     width: 100%;
   }
@@ -177,7 +194,7 @@
     margin-bottom: 5px;
     background-color: transparent;
   }
-  .field-input {
+  .field-input:not(.text-area) {
     height: 53px!important;
     padding: 20px!important;
     color: black!important;
@@ -238,12 +255,15 @@
 .invalid-feedback {
   left: calc(var(--inputs-border-width) + 19px)!important;
 }
-.form-error {
+.form-error, .form-response {
   width: 100%;
   color: var(--color-critical);
   font-size: 13px;
   text-align: center;
   margin-bottom: 8px;
+}
+.form-response {
+  color: var(--color-success);
 }
 #MadJunAuthorization {
   .authorization-section {

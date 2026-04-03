@@ -17,7 +17,7 @@ export const routes: Routes = [
       { path: 'login', component: Login, canActivate: [authGuard] },
       { path: 'signup', component: Signup, canActivate: [authGuard] },
       { path: 'privacy-policy', component: PrivacyPolicy },
-      { path: 'article/:title', component: Article },
+      { path: 'article/:url', component: Article },
       { path: 'blog', component: Blog },
     ]
   }

@@ -2085,10 +2085,6 @@ app-reviews-slider {
   justify-content: center;
 }
 
-.title-wrapper.center {
-  justify-content: center;
-}
-
 .title-wrapper.right {
   justify-content: flex-end;
 }

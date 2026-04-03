@@ -38,22 +38,32 @@ export class MenuDropdown implements OnInit, OnDestroy {
     else if (this.menuType === 'ACCOUNT') {
       this.menuLink = '/personal';
 
+      let isLogged: boolean = this.authService.isLoggedIn();
+
+      if (isLogged) {
+        this.getUserInfo();
+      }
       this.loginSubscription = this.authService.loginStatus.subscribe(value => {
         if (value) {
 
-          this.userSubscription = this.authService.getUserInfo().subscribe({
-            next: (data: User | LoginFailure) => {
-              if ((data as User).name !== undefined) {
-                this.userName = (data as User).name;
-              }
-            },
-            error: error => {
-              this.userName = 'unknown user';
-            }
-          });
+          this.getUserInfo();
         }
       });
     }
+  }
+
+  private getUserInfo(): void {
+
+    this.userSubscription = this.authService.getUserInfo().subscribe({
+      next: (data: User | LoginFailure) => {
+        if ((data as User).name !== undefined) {
+          this.userName = (data as User).name;
+        }
+      },
+      error: error => {
+        this.userName = 'unknown user';
+      }
+    });
   }
 
   ngOnDestroy(): void {

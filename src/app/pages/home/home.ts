@@ -9,6 +9,7 @@ import {Subscription} from 'rxjs';
 import {isArray} from '@angular/compiler-cli/src/ngtsc/annotations/common';
 import {ReviewsSlider} from '../../components/reviews-slider/reviews-slider';
 import {ScrollingService} from '../../services/scrolling-service';
+import {requestTypes} from '../../requests/request-type';
 
 @Component({
   selector: 'app-home',
@@ -68,4 +69,5 @@ export class Home implements OnInit, AfterViewInit, OnDestroy {
     this.serviceOpen = status;
   }
 
+  protected readonly requestTypes = requestTypes;
 }

@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 import {Observable, Observer, Subject} from 'rxjs';
 import {LoginFailure, LoginSuccess, LoginType, SignupType, User} from './auth-types';
 import {Environment} from '../environment/environment';

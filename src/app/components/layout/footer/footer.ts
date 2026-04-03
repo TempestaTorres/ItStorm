@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import {RouterLink} from '@angular/router';
 import {ModalService} from '../../../modals/modal-service/modal-service';
+import {requestTypes} from '../../../requests/request-type';
 
 @Component({
   selector: 'app-footer',
@@ -20,4 +21,6 @@ export class Footer {
  public close(status: boolean): void {
    this.serviceOpen = status;
  }
+
+  protected readonly requestTypes = requestTypes;
 }

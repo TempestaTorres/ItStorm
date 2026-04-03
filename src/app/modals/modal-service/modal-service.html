@@ -27,7 +27,7 @@
 
               <!-- Heading -->
               <div class="modal-heading center">
-                @if (modalType === 'consultation') {
+                @if (modalType === requestTypes.consultation) {
                   <h2 class="heading-title">Закажите бесплатную консультацию!</h2>
                 } @else {
                   <h2 class="heading-title">Заявка на услугу</h2>
@@ -44,7 +44,7 @@
                 </div>
               }
 
-              @if (modalType === 'service') {
+              @if (modalType === requestTypes.order) {
                 <!-- Services -->
               <div class="select">
                 <select
