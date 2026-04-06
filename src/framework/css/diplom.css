@@ -251,6 +251,9 @@
   .input-field__checkbox-wrapper {
     padding: 5px 0 20px 0;
   }
+  .color-option-5 .typeset {
+    line-height: 19px!important;
+  }
 }
 .invalid-feedback {
   left: calc(var(--inputs-border-width) + 19px)!important;

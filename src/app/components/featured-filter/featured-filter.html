@@ -46,7 +46,8 @@
         </div>
 
         <!-- Content -->
-        <div #content class="eael-accordion-content clearfix">
+        <div #content class="eael-accordion-content clearfix"
+        (mouseleave)="onAccordionClick(item,header, content)">
           @for (item of filterTypes; track $index) {
 
             <!-- Filter item -->

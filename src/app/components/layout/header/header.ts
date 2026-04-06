@@ -103,4 +103,10 @@ export class Header implements OnInit, OnDestroy, AfterViewInit {
   reset() {
     this.header.nativeElement.classList.remove('it-storm-section-header-hidden', 'it-storm-section-header-sticky', 'animate');
   }
+
+  public onLinkClick(id: string): void {
+
+    this.router.navigate([''], { fragment: id }).then(() => {});
+
+  }
 }

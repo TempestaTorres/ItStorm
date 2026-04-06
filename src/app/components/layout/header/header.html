@@ -26,9 +26,9 @@
               <!-- About us -->
               <li>
                 <a class="nav-menu-item list-menu__item header__menu-item header__menu-item--top"
+                   (click)="onLinkClick('about-us')"
                    routerLinkActive="header__active-menu-item"
-                   ariaCurrentWhenActive="page"
-                   [routerLink]="['/about']">
+                   ariaCurrentWhenActive="page">
                   <span class="label">О нас</span>
                 </a>
               </li>
@@ -44,18 +44,18 @@
               <!-- Reviews -->
               <li>
                 <a class="nav-menu-item list-menu__item header__menu-item header__menu-item--top"
+                   (click)="onLinkClick('reviews')"
                    routerLinkActive="header__active-menu-item"
-                   ariaCurrentWhenActive="page"
-                   [routerLink]="['/reviews']">
+                   ariaCurrentWhenActive="page">
                   <span class="label">Отзывы</span>
                 </a>
               </li>
               <!-- Contacts -->
               <li>
                 <a class="nav-menu-item list-menu__item header__menu-item header__menu-item--top"
+                   (click)="onLinkClick('contacts')"
                    routerLinkActive="header__active-menu-item"
-                   ariaCurrentWhenActive="page"
-                   [routerLink]="['/contact']">
+                   ariaCurrentWhenActive="page">
                   <span class="label">Контакты</span>
                 </a>
               </li>

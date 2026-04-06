@@ -5,8 +5,6 @@ import {RouterLink} from '@angular/router';
 import {ArticleService} from '../../articles/article-service';
 import {ArticleImage, ArticleType} from '../../articles/article-types';
 import {Subscription} from 'rxjs';
-// @ts-ignore
-import {isArray} from '@angular/compiler-cli/src/ngtsc/annotations/common';
 import {ReviewsSlider} from '../../components/reviews-slider/reviews-slider';
 import {ScrollingService} from '../../services/scrolling-service';
 import {requestTypes} from '../../requests/request-type';
@@ -29,6 +27,8 @@ export class Home implements OnInit, AfterViewInit, OnDestroy {
 
   public articles: ArticleType[] = [];
   public articleImgUrl: string = ArticleImage.path;
+
+  protected readonly requestTypes = requestTypes;
 
 
   constructor(private slickService: SlickService, private articleService: ArticleService,
@@ -69,5 +69,4 @@ export class Home implements OnInit, AfterViewInit, OnDestroy {
     this.serviceOpen = status;
   }
 
-  protected readonly requestTypes = requestTypes;
 }

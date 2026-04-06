@@ -69,6 +69,8 @@ export class Article implements OnInit, OnDestroy {
   public formResponse: boolean = false;
   public errorMsg: string = '';
 
+  protected readonly UserCommentActions = UserCommentActions;
+
   constructor(public articleService: ArticleService, private activatedRoute: ActivatedRoute,
               private authService: AuthService, private scrollingService: ScrollingService,
               private commentService: CommentService,) {}
@@ -137,7 +139,9 @@ export class Article implements OnInit, OnDestroy {
             this.formResponse = true;
             this.commentForm.reset();
 
-            this.getArticle(this.articleUrl);
+            //this.getArticle(this.articleUrl);
+            this.getComments();
+            this.getCommentsActionsArticle(this.article.id);
           }
           else {
             this.errorMsg = "Опубликовать не удалось.";
@@ -255,14 +259,20 @@ export class Article implements OnInit, OnDestroy {
 
   }
 
-  public loadComments(): void {
+  public loadComments(target: HTMLElement): void {
 
     this.loading = true;
-    this.offset += this.comments.length;
 
     setTimeout(() => {
       this.loading = false;
+      this.offset += this.comments.length;
 
+      this.getComments();
+      this.getCommentsActionsArticle(this.article.id);
+
+      setTimeout(() => {
+        this.scrollingService.toTarget(target);
+      },500);
 
     }, 700);
   }
@@ -303,5 +313,4 @@ export class Article implements OnInit, OnDestroy {
     return this.authService.isLoggedIn();
   }
 
-  protected readonly UserCommentActions = UserCommentActions;
 }
